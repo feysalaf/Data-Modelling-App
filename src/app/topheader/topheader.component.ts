@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topheader.component.css']
 })
 export class TopheaderComponent implements OnInit {
-
-  constructor() { }
+  name: string;
+  constructor() {
+    this.name  = 'Sir';
+  }
 
   ngOnInit(): void {
 
