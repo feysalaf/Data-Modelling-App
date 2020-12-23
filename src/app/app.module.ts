@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopheaderComponent } from './topheader/topheader.component';
 import { TestcommandsComponent } from './testcommands/testcommands.component';
+import { InfopanelverticalComponent } from './infopanelvertical/infopanelvertical.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopheaderComponent,
-    TestcommandsComponent
+    TestcommandsComponent,
+    InfopanelverticalComponent
   ],
   imports: [
     BrowserModule,
