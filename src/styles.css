@@ -1,11 +1,15 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+
+/* background-color: #8ABA87; */
+/*
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
 
 .Background_photo_page_1{
 	/* background-image: url('/static/n.png');*/
-  	background-color: #1D1D1D;
+  	background-color: #FFFFFF;
     /* background-color: #8ABA87; */
 	z-index: -3;
 	position: absolute;
@@ -26,7 +30,7 @@ td{
   display: grid;
   z-index: 100;
   /*Define widths */
-  /* /grid-template-columns: 1fr 2fr 1fr;/ */
+  /*grid-template-columns: 1fr 2fr 1fr;*/
   /* Can add gap between columns(all) */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
@@ -159,13 +163,13 @@ td{
 #Output_value_2{
 	font-size: 20px;
   font-family: iosevka;
-  /* /color:#00ACEE;/ */
+  /*color:#00ACEE;*/
 
 }
 #Output_value_3{
 	font-size: 20px;
   font-family: iosevka;
-  /* /color:#00ACEE;/ */
+  /*color:#00ACEE;*/
 
 }
 
