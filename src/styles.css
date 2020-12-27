@@ -4,4 +4,26 @@
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";  
+@import "tailwindcss/utilities";
+
+
+.place_boxes{
+  @apply box-border h-32 w-32 min-h-full min-w-full p-4 bg-purple-100 content-center;
+  color:black;
+}
+
+.place_box_thin{
+  @apply box-border  h-10 w-32 p-4 min-h-full min-w-full bg-blue-50 content-center;
+}
+
+.threediv{
+  grid-row:2/10;
+}
+
+.fivediv{
+  grid-row: 2/10;
+}
+
+.sevendiv{
+  grid-row:2/9;
+}
