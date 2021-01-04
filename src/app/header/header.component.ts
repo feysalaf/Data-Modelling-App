@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-topheader',
-  templateUrl: './topheader.component.html',
-  styleUrls: ['./topheader.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class TopheaderComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   name: string;
   constructor() {
     this.name  = 'Sir';
