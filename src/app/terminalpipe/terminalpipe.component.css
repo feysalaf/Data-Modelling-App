@@ -6,29 +6,44 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
+@font-face {
+  font-family: iosevka-regular;
+  src: url(/assets/fonts/iosevka-regular.ttf) format("truetype");
+}
 
 .flex_container{
   display: flex;
   flex-direction: column;
   height: 100%;
-}
+ }
+
+
 .box{
   flex:1;
   background-color: #1F2430;
+  border-radius: 15px;
 
-  }
-
-.text{
-  color:#BFBAB0;
 }
 
-   hr {
-       display: block;
-       height: 1px;
-       border: 0;
-       border-top:1px solid #BFBAB0;
-       margin: 10px auto 0px auto;
-       padding: 0;
-       width:80%;
-   }
+.text{
+  color:#00ACEE;
+}
+
+.terminalcontent{
+  color:#BFBAB0;
+  font-size:22px;
+  text-align: left;
+  font-family:iosevka-regular;
+
+ }
+
+
+hr{
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top:1px solid #00ACEE;
+   margin: 10px auto 0px auto;
+   padding: 0;
+   width:80%;
+}
