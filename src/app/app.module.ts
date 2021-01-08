@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { InfopanelverticalComponent } from './infopanelvertical/infopanelvertical.component';
 import { HeaderComponent } from './header/header.component';
 import { VerticalsidebarComponent } from './verticalsidebar/verticalsidebar.component';
+import { TerminalpipeComponent } from './terminalpipe/terminalpipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfopanelverticalComponent,
     HeaderComponent,
-    VerticalsidebarComponent
+    VerticalsidebarComponent,
+    TerminalpipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ ],
-  bootstrap: [ VerticalsidebarComponent]
+  providers: [   ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
