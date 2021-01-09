@@ -61,11 +61,9 @@
   grid-column:1/2;
 }
 
-
-
 .fivediv{
-  grid-row:span 3;
-  grid-column: 2/3;
+  grid-row:span 6;
+  grid-column: 2/4;
 }
 
 .sixdiv{

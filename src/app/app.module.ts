@@ -7,6 +7,7 @@ import { InfopanelverticalComponent } from './infopanelvertical/infopanelvertica
 import { HeaderComponent } from './header/header.component';
 import { VerticalsidebarComponent } from './verticalsidebar/verticalsidebar.component';
 import { TerminalpipeComponent } from './terminalpipe/terminalpipe.component';
+import { AnimationbarComponent } from './animationbar/animationbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TerminalpipeComponent } from './terminalpipe/terminalpipe.component';
     InfopanelverticalComponent,
     HeaderComponent,
     VerticalsidebarComponent,
-    TerminalpipeComponent
+    TerminalpipeComponent,
+    AnimationbarComponent
   ],
   imports: [
     BrowserModule,

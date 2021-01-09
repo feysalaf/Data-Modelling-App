@@ -1,0 +1,17 @@
+.parentcontainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.child_one{
+  background-color: #F8F0E3;
+  flex:1;
+}
+
+.child_two{
+  background-color:#FFFFFF;
+  height:60px;
+
+}
