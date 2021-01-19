@@ -31,7 +31,9 @@
 
 .text{
   color:#00ACEE;
-   
+  animation-name:stretch;
+  animation-duration: 1.5s;
+
 
 }
 
