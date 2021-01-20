@@ -1,4 +1,4 @@
-import { fade } from '../../assets/animations/animations';
+import { fade, stretchout } from '../../assets/animations/animations';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './animationbar.component.html',
   styleUrls: ['./animationbar.component.css'],
 
-  animations: [ fade, ]
+  animations: [ fade, stretchout ]
 
 })
 export class AnimationbarComponent implements OnInit {

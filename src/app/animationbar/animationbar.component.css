@@ -25,20 +25,24 @@
   background-color:#FFFFFF;
   height:60px;
   border-radius: 5px;
+}
 
-
+.hline_container{
+  display: flex;
+  border-radius: 10px;
+  background-color:orange;
+  height:5px;
 }
 
 .text{
   color:#00ACEE;
-  animation-name:stretch;
-  animation-duration: 1.5s;
-
-
+  font-family: noto sans light;
+  font-size:30px;
 }
 
 
-hr{
+.hline{
+  flex:1;
    display: block;
    height: 1px;
    border: 0;
