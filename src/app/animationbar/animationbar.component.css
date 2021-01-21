@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* background-color: #8ABA87; */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.parentcontainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap:20px;
+
+}
+
+.child_one{
+  background-color: #F8F0E3;
+  flex:1;
+  border-radius: 30px;
+}
+
+.child_two{
+  background-color:#FFFFFF;
+  height:60px;
+  border-radius: 5px;
+}
+
+.hline_container{
+  display: flex;
+  border-radius: 10px;
+  background-color:orange;
+  height:5px;
+}
+
+.text{
+  color:#00ACEE;
+  font-family: noto sans light;
+  font-size:30px;
+}
+
+
+.hline{
+  flex:1;
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top:1px solid #00ACEE;
+   margin: 10px auto 0px auto;
+   padding: 0;
+   width:80%;
+}

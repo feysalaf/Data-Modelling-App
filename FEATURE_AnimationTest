@@ -1,0 +1,21 @@
+FEATURE_AnimationTest
+
+PURPOSE:
+
+To test animation functions on the branch without changing the layout branch
+
+
+CHANGES: 
+
+Major change is to merge layout blocks 5,6,8,9.
+
+|-----------||-----------|
+|           ||           |
+|     5     ||    6      |
+|           ||           |
+|-----------||-----------|  
+|-----------||-----------|     ---->>>>       ONE BLOCK
+|           ||           |
+|     8     ||    9      |
+|           ||           |
+|-----------||-----------|

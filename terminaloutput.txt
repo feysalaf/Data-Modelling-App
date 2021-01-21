@@ -1,0 +1,648 @@
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names         |      Size
+main.js             | main          |  23.56 MB
+vendor.js           | vendor        |   2.63 MB
+polyfills.js        | polyfills     | 141.36 kB
+runtime.js          | runtime       |   6.15 kB
+styles.css          | styles        |  39 bytes
+
+| Initial Total |  26.33 MB
+
+Build at: 2021-01-07T18:02:57.882Z - Hash: c06f11d5efcd9949ce44 - Time: 88903ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names  |     Size
+main.js             | main   | 23.56 MB
+styles.css          | styles | 39 bytes
+
+3 unchanged chunks
+
+Build at: 2021-01-07T18:04:38.548Z - Hash: 601bb6b3688178be862c - Time: 19907ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:06:00.099Z - Hash: 1030ae4dc5cd20609774 - Time: 4845ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:07:00.611Z - Hash: 7ae9c20cd9307b26b445 - Time: 3911ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:07:37.402Z - Hash: 0e73461e2ed556a3d24a - Time: 3712ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:08:12.412Z - Hash: efaf1d33f59f7138c22c - Time: 17175ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:08:28.847Z - Hash: 579f7b3a0eeb5ec0b3e0 - Time: 16136ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: 2021-01-07T18:09:24.829Z - Hash: 579f7b3a0eeb5ec0b3e0 - Time: 3563ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:19:36.519Z - Hash: 5d7aed9fb79a0599735c - Time: 19110ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names  |     Size
+main.js             | main   | 17.68 MB
+vendor.js           | vendor |  2.64 MB
+
+3 unchanged chunks
+
+Build at: 2021-01-07T18:20:31.838Z - Hash: 500c0478db975e9c3263 - Time: 3798ms
+
+✔ Compiled successfully.
+    
+    Error: src/app/terminalpipe/terminalpipe.component.html:24:1 - error NG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags
+    
+    24 </div>
+       ~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:5:16
+        5   templateUrl: './terminalpipe.component.html',
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Error occurs in the template of component TerminalpipeComponent.
+    src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names  |     Size
+main.js             | main   | 23.56 MB
+vendor.js           | vendor |  2.63 MB
+
+3 unchanged chunks
+
+Build at: 2021-01-07T18:22:51.308Z - Hash: 9a58285d0e8a8142ab17 - Time: 4597ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:23:07.918Z - Hash: b4eba61d6ce9e8fce33b - Time: 2873ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:23:29.370Z - Hash: 78ac2f3ed891b6dfc2d3 - Time: 2939ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:23:42.529Z - Hash: 163bafbc825618248878 - Time: 3339ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:23:59.516Z - Hash: cab3105aab7952dd1473 - Time: 2959ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:24:17.913Z - Hash: a2ec68d61580e3dcb49d - Time: 2870ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:25:13.452Z - Hash: 9c7f239f2f2e727c2fc9 - Time: 17789ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: 2021-01-07T18:25:51.189Z - Hash: 9c7f239f2f2e727c2fc9 - Time: 3039ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:26:38.441Z - Hash: 68e04b04d26702765e14 - Time: 3648ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:27:13.257Z - Hash: 0f3f786504b5f4b53195 - Time: 18592ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:38:00.372Z - Hash: 3d70b286e3c2d5aa76d8 - Time: 4998ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:38:19.912Z - Hash: 3a32242badb1639dca02 - Time: 19313ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:44:12.617Z - Hash: 76117415c200a5f23932 - Time: 19805ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T18:45:17.485Z - Hash: 89b33a90e15a3107d426 - Time: 4037ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:01:11.695Z - Hash: 930479b0f97cd0a9906c - Time: 5900ms
+
+✔ Compiled successfully.
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:01:29.649Z - Hash: ae97c81322b527405768 - Time: 17728ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:03:08.581Z - Hash: 06cecf118d452d493f9c - Time: 18943ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:04:11.154Z - Hash: 94052c15635e13367115 - Time: 4048ms
+
+✔ Compiled successfully.
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: 2021-01-07T19:04:51.108Z - Hash: 94052c15635e13367115 - Time: 3991ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:05:40.385Z - Hash: 9cf52a6965faa1fbfaf7 - Time: 20958ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:06:39.908Z - Hash: 487f087663ee7ad23711 - Time: 20487ms
+
+✔ Compiled successfully.
+- Generating browser application bundles...
+    
+    Error: src/app/app.module.ts:17:5 - error NG6001: The class 'TerminalpipeComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+    
+    17     TerminalpipeComponent
+           ~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/terminalpipe/terminalpipe.component.ts:8:14
+        8 export class TerminalpipeComponent implements OnInit {
+                       ~~~~~~~~~~~~~~~~~~~~~
+        'TerminalpipeComponent' is declared here.
+    src/app/app.component.html:14:1 - error NG8001: 'app-header' is not a known element:
+    1. If 'app-header' is an Angular component, then verify that it is part of this module.
+    2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+    
+    14 <app-header></app-header>
+       ~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/app.component.ts:5:16
+        5   templateUrl: './app.component.html',
+                         ~~~~~~~~~~~~~~~~~~~~~~
+        Error occurs in the template of component AppComponent.
+    src/app/app.component.html:32:2 - error NG8001: 'app-verticalsidebar' is not a known element:
+    1. If 'app-verticalsidebar' is an Angular component, then verify that it is part of this module.
+    2. If 'app-verticalsidebar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+    
+    32  <app-verticalsidebar></app-verticalsidebar>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/app.component.ts:5:16
+        5   templateUrl: './app.component.html',
+                         ~~~~~~~~~~~~~~~~~~~~~~
+        Error occurs in the template of component AppComponent.
+    src/app/app.component.html:46:1 - error NG8001: 'app-terminalpipe' is not a known element:
+    1. If 'app-terminalpipe' is an Angular component, then verify that it is part of this module.
+    2. If 'app-terminalpipe' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+    
+    46 <app-terminalpipe></app-terminalpipe>
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+      src/app/app.component.ts:5:16
+        5   templateUrl: './app.component.html',
+                         ~~~~~~~~~~~~~~~~~~~~~~
+        Error occurs in the template of component AppComponent.
+    
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names |     Size
+main.js             | main  | 23.56 MB
+
+4 unchanged chunks
+
+Build at: 2021-01-07T19:11:28.264Z - Hash: 1e93967b90fa3acb3319 - Time: 5999ms
+
+✔ Compiled successfully.
