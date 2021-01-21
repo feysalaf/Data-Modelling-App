@@ -1,0 +1,19 @@
+Version 0.0.2 Notes
+
+FEATURES:
+
+Contains
+-Fully functional grid template
+-Integrated animations module in assets
+-Functioning flexbox buttons
+
+
+USAGE:
+
+-Animations:
+
+Add the 'import {fade, stretchout} from ../../assets/animations/animation' at top of component.ts file. 
+Afterwards, add 'animations:[fade,stretchout]' in the components in the same file
+Afterwards the animation functions can be used easily using '@fade' in the html div tags like '<div @fade>Element
+</div>'
+
