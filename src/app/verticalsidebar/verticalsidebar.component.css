@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 /* background-color: #8ABA87; */
 
 @import "tailwindcss/base";
@@ -34,8 +33,21 @@
  .boxbutton{
      @apply rounded-lg;
      width:180px;
+
   }
 
+table{
+  font-family: noto sans light;
+}
+
+button{
+  outline:none;
+}
+
+.buttonfont{
+  font-family: noto sans light;
+
+}
  hr {
      display: block;
      height: 1px;
