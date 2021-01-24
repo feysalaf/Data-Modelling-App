@@ -11,32 +11,41 @@ import * as io from 'socket.io-client';
 })
 export class VerticalsidebarComponent implements OnInit {
   //initialize html vars
-  output:number;
+  output:string;
   constructor() {
   }
 
   updatehtml(){
-    let mynum: number;
-    mynum = Math.floor(Math.random() * 100) + 1  ;
-    this.output = mynum;
+    let mynum: string;
+    // mynum = Math.floor(Math.random() * 100) + 1  ;
+    // this.output = mynum;
 
   }
 
   fetchdatafromserver(){
     let api_url: string;
+    let datas: string;
     api_url = "127.0.0.1:5000/fetchdata";
     const socket = io.connect('http://localhost:5000/');
     console.log("Connected to server");
     //Describes one event
-    socket.on( 'connect', function() {
+    socket.on( 'connect',() => {
       socket.emit( 'my event', {
-        data: 'User Connected'
+        'data': 'User Connected'
       } )})
 
     //receive response
-    socket.on( 'receivefromserver', function( msg ) {
-      console.log("Data received from server")
-  })}
+    socket.on( 'receivefromserver', (msg) => {
+      console.log("Data received from server");
+      datas = msg['data'];
+      console.log("The data is " + datas);
+      this.output = msg['data'];
+    })
+
+
+
+
+}
 
   ngAfterContentChecked(){
 

@@ -12,11 +12,10 @@ socketio = SocketIO(app,cors_allowed_origins=['http://localhost:4200'],async_mod
 
 
 ######################################################
-@app.route('/',methods=['GET'])
-
-def messageReceived():
-    return jsonify(2)
-
+# @app.route('/',methods=['GET','POST'])
+# def messageReceived():
+#     print("User connected...")
+#     return jsonify(10)
 
 ########### RECEIVE FROM JS INCOMING #################
 @socketio.on('connect')
@@ -26,7 +25,8 @@ def connectconfirm(methods=['GET','POST']):
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
-    socketio.emit('receivefromserver', json, callback=messageReceived)
+    # socketio.emit('receivefromserver', json, callback=lambda:print("Message Received."))
+    socketio.emit('receivefromserver', json)
 
 @socketio.on('module_trigger')
 def handle_module_trigger(jsons, methods=['GET','POST']):
