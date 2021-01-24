@@ -1,0 +1,184 @@
+
+
+
+.Background_photo_page_1{
+	/* background-image: url('/static/n.png');*/
+  	background-color: #1F1F1F;
+    /* background-color: #8ABA87; */
+	z-index: -3;
+	position: absolute;
+    	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+}
+
+
+.main_grid_wrapper{
+  display: grid;
+  z-index: 100;
+  /*Define widths */
+  /*grid-template-columns: 1fr 2fr 1fr;*/
+  /* Can add gap between columns(all) */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  /* grid-auto-rows: 100px; */
+  grid-auto-rows:minmax(300px;auto);
+  /* Align the items in the box to start of their individual cell, "center" of their individual cell */
+  /* Default is "stretch", "end" also available */
+  justify-items:stretch;
+ }
+
+ /* NOTE: useful for debugging */
+/* .main_grid_wrapper > div{
+  background: #eee;
+  padding: 1em;
+}
+
+.main_grid_wrapper > div:nth-child(odd){
+  background: #ddd;
+} */
+
+.one_heading{
+  grid-column: 1/3;
+  background: #1f1f1f;
+}
+
+
+.main_heading {
+  margin-left: 20px;
+  position: relative;
+  float: left;
+  font-size: 30px;
+  font-family: noto sans;
+  color: White;
+  text-align: left;
+
+}
+
+
+/*
+.main_heading_paragraph{
+  position: relative;
+  float: left;
+  font-size: 18px;
+  font-family: noto sans light;
+  margin: 0px 700px 0px 50px;
+  color: White;
+  text-align: left;
+
+ }
+*/
+
+ .Output{
+	font-family: noto sans;
+  color:White;
+  float: left;
+  line-height: 0.5;
+  border-radius: 30px;
+  background-color:#2C2A2B;
+  width: 100%;
+  height: 100%;
+}
+
+.Output #table_output{
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+}
+
+#Output_value_1{
+	 font-size: 20px;
+   color:#FFFFFF;
+   font-family: iosevka;
+
+}
+
+#Output_value_2{
+	font-size: 20px;
+  font-family: iosevka;
+  /*color:#00ACEE;*/
+
+}
+#Output_value_3{
+	font-size: 20px;
+  font-family: iosevka;
+  /*color:#00ACEE;*/
+
+}
+
+
+
+#exe-btn{
+  margin-top: 25px;
+  margin-left: 20px;
+	background-color:#20BDF1;
+	width: 100px;
+	height: 35px;
+	border: none;
+	border-radius: 40px;
+	color: White;
+	font-family: noto sans light;
+	font-weight: bold;
+
+}
+
+/*
+
+.Socket_message_wrapper{
+	position: relative;
+	margin-left: -485px;
+	  float: left;
+	 margin-top: 250px;;
+}
+
+.message_holder{
+	position: relative;
+	margin-left: -585px;
+	float: left;
+	margin-top: 250px;
+	z-index: 23	;
+}
+
+.response{
+	position: relative;
+	margin-left: -585px;
+	float: left;
+	margin-top: 250px;
+	z-index: 23	;
+
+}
+
+.cool_box{
+	position: absolute;
+	height: 250px;
+	width: 400px;
+	z-index: -2;
+	margin: 240px 39px 0px;
+	border-radius: 30px;
+	background-color:#2C2A2B;
+}
+
+.chartcanvas{
+	position: absolute;
+	height: 550px;
+	margin: 310px 600px;
+	width: 600px;
+}
+#myChart{
+	width: 100px;
+	height: 100px;
+}
+
+
+.chartcanvas1{
+	position: absolute;
+	height: 750px;
+	margin: 310px 600px;
+	width: 600px;
+}
+#myChart{
+	width: 100px;
+	height: 100px;
+} */

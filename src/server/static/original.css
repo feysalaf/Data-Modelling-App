@@ -1,0 +1,174 @@
+
+
+.Background_photo_page_1{
+	/* background-image: url('/static/n.png');*/
+	background-color: #1F1F1F;
+	z-index: -3;
+	position: absolute;
+    	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+}
+
+.Background_photo_page_2{
+	background-image: url('image_background_2.png');
+	margin-top: 0%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	position: absolute;
+	background-size: 100% 100%;
+	height: 100%;
+	width: 100%;
+
+}
+
+.wrapper{
+  display: grid;
+  z-index: 100;
+  /*Define widths */
+  /*grid-template-columns: 1fr 2fr 1fr;*/
+  /* Can add gap between columns(all) */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1em;
+  /* grid-auto-rows: 100px; */
+  grid-auto-rows:minmax(200px;auto);
+  /* Align the items in the box to start of their individual cell, "center" of their individual cell */
+  /* Default is "stretch", "end" also available */
+  justify-items:stretch;
+ }
+.wrapper > div{
+  background: #eee;
+  padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+  background: #ddd;
+}
+
+
+
+
+.main_heading {
+  position: relative;
+  float: left;
+  font-size: 30px;
+  font-family: noto sans;
+  margin: 40px 500px 0px 50px;
+  color: White;
+	width: 55%;
+  text-align: left;
+
+}
+.main_heading_paragraph{
+  position: relative;
+  float: left;
+  font-size: 18px;
+  font-family: noto sans light;
+  margin: 0px 700px 0px 50px;
+  color: White;
+  text-align: left;
+
+ }
+
+
+ .Output{
+	font-family: noto sans;
+	color:White;
+    float: left;
+    position: relative;
+    width:30%;
+    margin-left: 50px;
+	margin-top: 30px;
+	line-height: 8px;
+
+}
+
+#Output_value_1{
+	 font-size: 20px;
+}
+
+#Output_value_2{
+	font-size: 20px;
+}
+#Output_value_3{
+	font-size: 20px;
+}
+
+
+ .execute_button{
+ 	 position: relative;
+     }
+
+
+
+#exe-btn{
+	background-color:#20BDF1;
+	width: 100px;
+	height: 35px;
+	border: none;
+	border-radius: 40px;
+	color: White;
+	font-family: noto sans light;
+	font-weight: bold;
+
+}
+
+
+.Socket_message_wrapper{
+	position: relative;
+	margin-left: -485px;
+	  float: left;
+	 margin-top: 250px;;
+}
+
+.message_holder{
+	position: relative;
+	margin-left: -585px;
+	float: left;
+	margin-top: 250px;
+	z-index: 23	;
+}
+
+.response{
+	position: relative;
+	margin-left: -585px;
+	float: left;
+	margin-top: 250px;
+	z-index: 23	;
+
+}
+
+.cool_box{
+	position: absolute;
+	height: 250px;
+	width: 400px;
+	z-index: -2;
+	margin: 240px 39px 0px;
+	border-radius: 30px;
+	background-color:#2C2A2B;
+}
+
+.chartcanvas{
+	position: absolute;
+	height: 550px;
+	margin: 310px 600px;
+	width: 600px;
+}
+#myChart{
+	width: 100px;
+	height: 100px;
+}
+
+
+.chartcanvas1{
+	position: absolute;
+	height: 750px;
+	margin: 310px 600px;
+	width: 600px;
+}
+#myChart{
+	width: 100px;
+	height: 100px;
+}

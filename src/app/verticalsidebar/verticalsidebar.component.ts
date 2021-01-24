@@ -13,16 +13,7 @@ export class VerticalsidebarComponent implements OnInit {
   output:number;
   constructor() {
   }
-
-  mymethod(){
-    let z:number;
-    let x = 1;
-    let y = 2;
-    x = x + 1;
-    return x;
-
-  }
-
+ 
   updatehtml(){
     let mynum: number;
     mynum = Math.floor(Math.random() * 100) + 1  ;
@@ -39,8 +30,6 @@ export class VerticalsidebarComponent implements OnInit {
     let buttonobserver = fromEvent(button, 'click');
     //whenever the button is pressed, the buttonobserver knows it
     //and then it executes a function upon the CLICK EVENT
-    let method_returned:number;
-    method_returned = this.mymethod();
     const uponeventexecute = buttonobserver.subscribe(() => {this.updatehtml();})
     }
 
