@@ -2,27 +2,31 @@ from lib.imports.server_imports import *
 #importing user libraries
 from lib.exponential.module import *
 from lib.RandomGeneration import *
-
 #base initialization
 app = Flask(__name__,template_folder ='templates/')
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
+CORS(app)
 #instantiating the socket io object
-socketio = SocketIO(app)
+socketio = SocketIO(app,cors_allowed_origins=['http://localhost:4200'],async_mode='threading')
 
 
 
 ######################################################
-def messageReceived(methods=['GET', 'POST']):
-    print('message was received!!!')
+@app.route('/',methods=['GET'])
+
+def messageReceived():
+    return jsonify(2)
 
 
 ########### RECEIVE FROM JS INCOMING #################
-
+@socketio.on('connect')
+def connectconfirm(methods=['GET','POST']):
+    return jsonify(1);
 
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
-    socketio.emit('my response', json, callback=messageReceived)
+    socketio.emit('receivefromserver', json, callback=messageReceived)
 
 @socketio.on('module_trigger')
 def handle_module_trigger(jsons, methods=['GET','POST']):
@@ -39,6 +43,17 @@ def send_module_data_to_chart(jsons, methods=['GET','POST']):
 def execute_backend_addition(jsons, methods=['GET','POST']):
     send_bulk_json_out()
 
+@socketio.on('/fetchdata')
+def return_data(jsons,method=['GET','POST']):
+    print("Connected to server")
+    return jsonify(1);
+
+
+@app.route('/fetchdatas',methods=['GET', 'POST'])
+def return_data():
+    return jsonify(1)
+
+
 ########### BACKEND METHODS #################
 
 # def execute_addition():
@@ -52,7 +67,7 @@ def send_bulk_json_out():
     socketio.emit('send_to_js',(returned_json))
 
 
-################################################### 
+###################################################
 
 
 @app.route("/display/",methods=['GET','POST'])
