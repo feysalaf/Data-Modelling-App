@@ -37,7 +37,7 @@
   height:400px;
 }
 .place_boxes{
-  @apply box-border shadow-md h-32 w-32 min-h-full min-w-full p-4 inset-0 font-sans text-2xl flex items-center justify-center bg-purple-100 content-center;
+  @apply box-border shadow-md h-32 w-32 min-h-full min-w-full p-4 inset-0 font-sans text-2xl flex items-center justify-center bg-gray-600 content-center;
   color:black;
 }
 
