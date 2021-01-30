@@ -66,7 +66,7 @@ export class AnimationbarComponent implements OnInit {
               scales:{xAxes:[{type:'realtime',realtime:{
                     duration:20000,
                     refresh:2000,
-                    delay:1000,
+                    delay:3000,
                     pause:false,
                     onRefresh:()=>{
                        data.datasets.forEach((dataset: any)=> {
