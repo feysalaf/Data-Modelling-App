@@ -19,6 +19,10 @@
   flex:1;
  }
 
+ .backgroundcolboxA{
+   background-color: #2D2A2B;
+ }
+
  .box1{
    flex-grow: 2;
  }
