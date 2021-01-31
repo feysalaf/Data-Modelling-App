@@ -11,12 +11,12 @@
 
  .Background_photo_page_1{
  	/* background-image: url('/static/n.png');*/
-   	background-color: #FFFFFF;
+   	background-color: #9E9E9E;
      /* background-color: #8ABA87; */
  	z-index: -3;
  	position: absolute;
   min-width: 100%;
-    min-height: 100%;
+    min-height: 1750px;
 
  }
 
@@ -37,12 +37,12 @@
   height:400px;
 }
 .place_boxes{
-  @apply box-border shadow-md h-32 w-32 min-h-full min-w-full p-4 inset-0 font-sans text-2xl flex items-center justify-center bg-purple-100 content-center;
+  @apply box-border shadow-md h-32 w-32 min-h-full min-w-full p-4 inset-0 font-sans text-2xl flex items-center justify-center bg-gray-600 content-center;
   color:black;
 }
 
 .place_box_thin{
-  @apply box-border shadow-md h-10 w-32 p-4 min-h-full min-w-full bg-purple-100 content-center;
+  @apply box-border shadow-md h-10 w-32 p-0 min-h-full min-w-full content-center;
 }
 .onediv{
   grid-column: 1/2;
@@ -62,8 +62,9 @@
 }
 
 .fivediv{
-  grid-row:span 6;
+  grid-row:span 9;
   grid-column: 2/4;
+  height:1200px;
 }
 
 .sixdiv{
@@ -92,12 +93,12 @@
   grid-row:span 3;
 }
 
-.elevendiv{
+/* .elevendiv{
   height:400px;
   grid-row:span 3;
   grid-column: 2/4;
 
-}
+} */
 
 .twelvediv{
   grid-row:span 2;

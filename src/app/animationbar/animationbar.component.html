@@ -1,15 +1,23 @@
+
 <div class="parentcontainer text-center">
 
 
-                <div    class="child_one text-center">
-                  <div    class=" text-2xl mt-4   text-center  text">
-                             Animations
-                  </div>
+        <div    class="child_one text-center">
+          <div    class=" text-2xl mt-4 font-bold  text-center  text">
+                     Graphing Panel
+          </div>
 
-                  <div @stretchout class="hline"></div>
+          <div @stretchout class="hline"></div>
+          <!-- Add the chart -->
 
 
+                <div class="mt-10">
+                        <canvas class="mylinechart" chart-data="cdata"
+                        width="800" height="300">
+                        </canvas>
                 </div>
+
+        </div>
 
                 <div  class="child_two">
                  </div>

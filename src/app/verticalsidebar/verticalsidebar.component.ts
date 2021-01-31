@@ -10,41 +10,42 @@ import * as io from 'socket.io-client';
   animations:[fade,stretchout ]
 })
 export class VerticalsidebarComponent implements OnInit {
+
   //initialize html vars
   output:string;
+
   constructor() {
+
   }
 
   updatehtml(){
     let mynum: string;
     // mynum = Math.floor(Math.random() * 100) + 1  ;
     // this.output = mynum;
-
   }
 
   fetchdatafromserver(){
-    let api_url: string;
-    let datas: string;
-    api_url = "127.0.0.1:5000/fetchdata";
-    const socket = io.connect('http://localhost:5000/');
+    let api_b: string;
+    let api_base: string = 'http://localhost:5000/';
+    console.log(api_base);
+    const socket = io.connect(api_base);
     console.log("Connected to server");
-    //Describes one event
-    socket.on( 'connect',() => {
-      socket.emit( 'my event', {
-        'data': 'User Connected'
-      } )})
+
+    //call api point with data
+    socket.emit('api endpoint',{'data':'User connection'})
+
+    //call api points(multiple)
+    // socket.on( 'connect',() => {
+    //   socket.emit( 'my event', {
+    //     'data': 'User Connected'
+    //   } )})
 
     //receive response
     socket.on( 'receivefromserver', (msg) => {
       console.log("Data received from server");
-      datas = msg['data'];
-      console.log("The data is " + datas);
+      //send to html
       this.output = msg['data'];
     })
-
-
-
-
 }
 
   ngAfterContentChecked(){

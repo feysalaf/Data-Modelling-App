@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+//external imports
+import { ChartsModule } from 'ng2-charts';
+// import { ChartModule } from 'angular2-chartjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +26,7 @@ import { AnimationbarComponent } from './animationbar/animationbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChartsModule,
     BrowserAnimationsModule
   ],
   providers: [   ],
