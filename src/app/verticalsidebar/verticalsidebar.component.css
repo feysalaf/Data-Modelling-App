@@ -24,6 +24,21 @@
   width: 100%;
   height: 100%;
 }
+.box1flexcontainer{
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.box1childcflexcontainer{
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%
+}
 .box{
   @apply rounded-lg;
   flex:1;
@@ -38,6 +53,9 @@
  }
  .box1{
    flex-grow: 2;
+ }
+ .flexinfo{
+   flex-grow:1;
  }
  .flex_button_container{
    display: flex;

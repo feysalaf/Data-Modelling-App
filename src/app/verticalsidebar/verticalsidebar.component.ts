@@ -46,7 +46,7 @@ export class VerticalsidebarComponent implements OnInit {
     socket.on( 'receivefromserver', (msg) => {
       console.log("Data received from server");
       //send to html
-      this.output = msg['data'];
+      // this.output = msg['data'];
     })
 }
 

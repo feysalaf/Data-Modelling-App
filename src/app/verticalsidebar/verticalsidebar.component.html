@@ -1,41 +1,42 @@
 <div class="flex_container ">
-            <div class=" box box-border flex-col box1 shadow-md  backgroundcolboxA text-center ">
+            <div class=" box-border box1 shadow-md  backgroundcolboxA text-center ">
                           <!-- <div class="text-4xl mt-4
                               text font-bold bg-red-500 text-white ">Console Output</div> -->
-                              <div    class=" subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
-                                         Console Panel
-                              </div>
-                          <div @stretchout class="hline"></div>
-                          <div class="p-8 ml-2 text-left flex-col">
-                                      <div class="flex-2 bg-orange-500">
-                                                  <table class="ml-5 gap-2 bg-orange-500 ">
-                                                          <tr>
-                                                            <td><div @fade class="colbox"></div></td>
-                                                            <td class="bold-text">TEMPERATURE  </td>
-                                                            <td> {{temperature}} </td>
-                                                          </tr>
+                  <div class="box1flexcontainer flex-col">
+                          <div    class="subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
+                                     Console Panel
+                          </div>
+                          <div class="linecontainer"><div @stretchout class="hline"></div></div>
 
-                                                          <tr>
-                                                            <td><div @fade class="colbox"></div></td>
-                                                            <td class="bold-text">VELOCITY  </td>
-                                                            <td> {{velocity}} </td>
-                                                          </tr>
+                          <div class=" box1childcflexcontainer p-8 flex-1 text-left">
+                                          <table class="ml-5 gap-2 bg-orange-500 flex-grow">
+                                                  <tr>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">TEMPERATURE  </td>
+                                                    <td> {{temperature}} </td>
+                                                  </tr>
 
-                                                          <tr>
-                                                            <td><div @fade class="colbox"></div></td>
-                                                            <td class="bold-text">DENSITY  </td>
-                                                            <td> {{density}} </td>
-                                                          </tr>
+                                                  <tr>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">VELOCITY  </td>
+                                                    <td> {{velocity}} </td>
+                                                  </tr>
 
-                                                          <tr>
-                                                          </tr>
-                                                  </table>
-                                      </div>
+                                                  <tr>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">DENSITY  </td>
+                                                    <td> {{density}} </td>
+                                                  </tr>
 
-                                      <div @fade class="flex_button_container mb-4 ">
+                                                  <tr>
+                                                  </tr>
+                                          </table>
+
+                                      <div @fade class="flex_button_container mb-4  ">
                                                   <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white text-center ">Execute</button>
                                       </div>
                           </div>
+                  </div>
              </div>
 
              <div   class=" box box-border box2 shadow-md backgroundcolboxA text-center">
