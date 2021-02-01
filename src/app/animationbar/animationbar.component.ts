@@ -91,7 +91,14 @@ export class AnimationbarComponent implements OnInit {
                       // data.datasets[0].data.push({x:Math.random()});
                       // console.log(data.datasets[0].data);
                     }
-              }}]}};
+              }}]},
+
+              legend: {
+                  display: false
+                  }
+
+
+            };
 
 
         // var plugin= {
