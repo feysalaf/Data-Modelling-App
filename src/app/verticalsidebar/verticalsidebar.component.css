@@ -17,6 +17,11 @@
   font-family:ubuntu ;
   font-weight: 500;
 }
+.accent-text{
+  font-family:ubuntu ;
+  font-weight: 500;
+  color:#00ACEE;
+}
 .flex_container{
   display: flex;
   gap:20px;
@@ -75,6 +80,8 @@ table{
   font-family: noto sans light;
   font-size:26px;
   /* border-spacing: 0 15px; */
+  border-collapse: separate;
+ border-spacing: 50px 0;
 }
 
 button{
@@ -82,9 +89,9 @@ button{
 }
 
 .buttonfont{
-  font-family: noto sans light;
-  width:100%;
-  background-color: #00ACEE;
+      font-family: noto sans light;
+      width:100%;
+      background-color: #00ACEE;
 
 }
  hr {
@@ -98,7 +105,7 @@ button{
  }
 
  .hline{
-   flex:1;
+    flex:1;
     display: block;
     height: 1px;
     border: 0;

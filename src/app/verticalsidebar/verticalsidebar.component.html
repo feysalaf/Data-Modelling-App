@@ -11,21 +11,24 @@
                           <div class=" box1childcflexcontainer p-8 flex-1 text-left">
                                           <table class="ml-5 gap-2 bg-orange-500 flex-grow">
                                                   <tr>
-                                                    <td><div @fade class="colbox"></div></td>
-                                                    <td class="bold-text">TEMPERATURE  </td>
                                                     <td> {{temperature}} </td>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">TEMPERATURE   </td>
+                                                    <td class="ml-3 accent-text">&#176; C  </td>
                                                   </tr>
 
                                                   <tr>
+                                                    <td> {{velocity}} </td>
                                                     <td><div @fade class="colbox"></div></td>
                                                     <td class="bold-text">VELOCITY  </td>
-                                                    <td> {{velocity}} </td>
+                                                    <td class="ml-3 accent-text">km/h  </td>
                                                   </tr>
 
                                                   <tr>
+                                                    <td> {{density}} </td>
                                                     <td><div @fade class="colbox"></div></td>
                                                     <td class="bold-text">DENSITY  </td>
-                                                    <td> {{density}} </td>
+                                                    <td class="accent-text">&#181;g/m<sup>3</sup>  </td>
                                                   </tr>
 
                                                   <tr>
