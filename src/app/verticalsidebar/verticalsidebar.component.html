@@ -1,38 +1,38 @@
 <div class="flex_container ">
-<div   class=" box box-border box1 shadow-md backgroundcolboxA text-center "> <div class="text-4xl mt-4
-    text font-bold text-white">Console Output</div>
-<div @stretchout class="hline"></div>
-<div class="p-8 ml-2 text-left ">
-  <div @fade class="flex_button_container mb-4 ">
+            <div class=" box box-border flex-col box1 shadow-md  backgroundcolboxA text-center ">
+                          <!-- <div class="text-4xl mt-4
+                              text font-bold bg-red-500 text-white ">Console Output</div> -->
+                              <div    class=" subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
+                                         Console Panel
+                              </div>
+                          <div @stretchout class="hline"></div>
+                          <div class="p-8 ml-2 text-left ">
+                                      <div @fade class="flex_button_container mb-4 ">
+                                              <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-indigo-500 text-center ">Execute</button>
+                                      </div>
 
-    <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-indigo-500 text-center ">Execute</button>
+                                      <table class="ml-5">
+                                              <tr>
+                                                <td class="font-bold">Output:  </td>
+                                                <td> {{output}} </td>
+                                              </tr>
 
+                                              <tr>
+                                              </tr>
+                                      </table>
+                          </div>
+             </div>
 
-  </div>
-
-<table class="ml-5">
-<tr>
-  <td class="font-bold">Output:  </td>
-  <td> {{output}} </td>
-</tr>
-<tr></tr>
-</table>
- </div>
- </div>
- <div   class=" box box-border box2 shadow-md backgroundcolboxA text-center">
-   <div class="text-4xl mt-4
-      text font-bold text-white">Box 2</div> <div @stretchout class="hline"></div>
-      <div class="p-2  ml-8 mr-8 mb-4 text-left ">
-        Press create to form a new project and press delete to remove existing.
-        </div>
-      <div @fade class="flex_button_container ">
-
-        <div class=" boxbutton order-1 box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-red-500 text-center ">Delete</div>
-        <div class=" boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-green-500 text-center ">Create</div>
-
-
-      </div>
-
-
-</div>
+             <div   class=" box box-border box2 shadow-md backgroundcolboxA text-center">
+                           <div class="text-4xl mt-4
+                              text font-bold text-white">Box 2</div>
+                           <div @stretchout class="hline"></div>
+                           <div class="p-2  ml-8 mr-8 mb-4 text-left ">
+                                Press create to form a new project and press delete to remove existing.
+                           </div>
+                           <div @fade class="flex_button_container ">
+                                      <div class=" boxbutton order-1 box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-red-500 text-center ">Delete</div>
+                                      <div class=" boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-green-500 text-center ">Create</div>
+                           </div>
+            </div>
 </div>
