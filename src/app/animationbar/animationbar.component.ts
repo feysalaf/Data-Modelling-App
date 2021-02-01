@@ -32,6 +32,8 @@ export class AnimationbarComponent implements OnInit {
 
 
             let getchart = document.querySelector('.mylinechart') as HTMLCanvasElement;
+            let getchart1 = document.querySelector('.mylinecharta') as HTMLCanvasElement;
+            let getchart2 = document.querySelector('.mylinechartb') as HTMLCanvasElement;
 
             var data = {
                  datasets: [
@@ -109,6 +111,18 @@ export class AnimationbarComponent implements OnInit {
 
 
             var create_chart = new Chart(getchart,{
+              type:'line',
+              data:data,
+              options:option,
+              // plugins: plugin
+            })
+            var create_chart1 = new Chart(getchart1,{
+              type:'line',
+              data:data,
+              options:option,
+              // plugins: plugin
+            })
+            var create_chart2 = new Chart(getchart2,{
               type:'line',
               data:data,
               options:option,
