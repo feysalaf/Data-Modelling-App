@@ -6,20 +6,35 @@
                                          Console Panel
                               </div>
                           <div @stretchout class="hline"></div>
-                          <div class="p-8 ml-2 text-left ">
-                                      <div @fade class="flex_button_container mb-4 ">
-                                              <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-indigo-500 text-center ">Execute</button>
+                          <div class="p-8 ml-2 text-left flex-col">
+                                      <div class="flex-2 bg-orange-500">
+                                                  <table class="ml-5 gap-2 bg-orange-500 ">
+                                                          <tr>
+                                                            <td><div @fade class="colbox"></div></td>
+                                                            <td class="bold-text">TEMPERATURE  </td>
+                                                            <td> {{temperature}} </td>
+                                                          </tr>
+
+                                                          <tr>
+                                                            <td><div @fade class="colbox"></div></td>
+                                                            <td class="bold-text">VELOCITY  </td>
+                                                            <td> {{velocity}} </td>
+                                                          </tr>
+
+                                                          <tr>
+                                                            <td><div @fade class="colbox"></div></td>
+                                                            <td class="bold-text">DENSITY  </td>
+                                                            <td> {{density}} </td>
+                                                          </tr>
+
+                                                          <tr>
+                                                          </tr>
+                                                  </table>
                                       </div>
 
-                                      <table class="ml-5">
-                                              <tr>
-                                                <td class="font-bold">Output:  </td>
-                                                <td> {{output}} </td>
-                                              </tr>
-
-                                              <tr>
-                                              </tr>
-                                      </table>
+                                      <div @fade class="flex_button_container mb-4 ">
+                                                  <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white text-center ">Execute</button>
+                                      </div>
                           </div>
              </div>
 
@@ -34,5 +49,6 @@
                                       <div class=" boxbutton order-1 box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-red-500 text-center ">Delete</div>
                                       <div class=" boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-green-500 text-center ">Create</div>
                            </div>
+
             </div>
 </div>

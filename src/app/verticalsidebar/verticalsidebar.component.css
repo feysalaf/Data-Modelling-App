@@ -5,8 +5,18 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.colbox{
+  @apply h-6 shadow-2xl  ;
+  width:15px;
+  border-radius: 3px;
+  margin-right:4px;
+  background-color:#00ACEE;
+}
 
-
+.bold-text{
+  font-family:ubuntu ;
+  font-weight: 500;
+}
 .flex_container{
   display: flex;
   gap:20px;
@@ -45,6 +55,8 @@
 
 table{
   font-family: noto sans light;
+  font-size:26px;
+  /* border-spacing: 0 15px; */
 }
 
 button{
@@ -54,6 +66,7 @@ button{
 .buttonfont{
   font-family: noto sans light;
   width:100%;
+  background-color: #00ACEE;
 
 }
  hr {

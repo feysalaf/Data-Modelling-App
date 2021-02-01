@@ -12,7 +12,9 @@ import * as io from 'socket.io-client';
 export class VerticalsidebarComponent implements OnInit {
 
   //initialize html vars
-  output:string;
+  temperature:number;
+  velocity:number;
+  density:number;
 
   constructor() {
 
