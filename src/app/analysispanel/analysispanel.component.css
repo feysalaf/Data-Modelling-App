@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* background-color: #8ABA87; */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.flex_0{
+  
+}
+
+.flex_0_1{
+
+}
