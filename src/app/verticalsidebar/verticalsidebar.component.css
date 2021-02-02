@@ -94,7 +94,7 @@ button{
       background-color: #00ACEE;
 
 }
- hr {
+ /* hr {
      display: block;
      height: 1px;
      border: 0;
@@ -102,7 +102,7 @@ button{
      margin: 10px auto 0px auto;
      padding: 0;
      width:80%;
- }
+ } */
 
  .hline{
     flex:1;
