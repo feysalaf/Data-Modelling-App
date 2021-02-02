@@ -29,6 +29,7 @@ export class AnimationbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+            //fetch variable from backend
 
 
             let getchart = document.querySelector('.mylinechart') as HTMLCanvasElement;
@@ -61,8 +62,6 @@ export class AnimationbarComponent implements OnInit {
             };
             let loop_n = 0;
 
-
-
             var option = {
             	showLines: true,
               scales:{xAxes:[{type:'realtime',realtime:{
@@ -72,17 +71,10 @@ export class AnimationbarComponent implements OnInit {
                     pause:false,
                     onRefresh:()=>{
                        data.datasets.forEach((dataset: any)=> {
-
                          dataset.data.push({
-
                            x: Date.now(),
-
                            y: Math.random()
-
                          });
-
-
-
                        });
 
                       // loop_n = loop_n + 1;
