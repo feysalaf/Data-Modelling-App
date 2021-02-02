@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { VerticalsidebarComponent } from './verticalsidebar/verticalsidebar.component';
 import { TerminalpipeComponent } from './terminalpipe/terminalpipe.component';
 import { AnimationbarComponent } from './animationbar/animationbar.component';
+import { AnalysispanelComponent } from './analysispanel/analysispanel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AnimationbarComponent } from './animationbar/animationbar.component';
     HeaderComponent,
     VerticalsidebarComponent,
     TerminalpipeComponent,
-    AnimationbarComponent
+    AnimationbarComponent,
+    AnalysispanelComponent
   ],
   imports: [
     BrowserModule,
