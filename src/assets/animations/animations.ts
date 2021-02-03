@@ -1,4 +1,5 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {  animation, trigger, animateChild, group,
+  transition, animate, style, query,state } from '@angular/animations';
 
 
 export let fade = trigger('fade',[
@@ -24,3 +25,11 @@ export let stretchout = trigger('stretchout',[
   transition('void => *',[
   style({ }),
   animate(1800)])])
+
+export const soso = animation([
+    transition('* => *',[
+
+      style({width:"*"}),
+      animate(1800,style({  width: '{{ inputwidth }}'}))
+    ])
+  ])

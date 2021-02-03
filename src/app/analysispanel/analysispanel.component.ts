@@ -15,30 +15,64 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       // style({opacity:0}),
       // animate(2200)]),
 
-
       transition('* => *',[
-      style({"transform":"scaleX(0.2)"}),
-      animate(1800,style({"transform":"scaleX(${meravar})"}))
-    ])])
+      style({width:'*'}),
+      animate(1800,style({width:"100%"})),
+
+    ])]),
+
+    trigger('openClose', [
+     // ...
+     state('open', style({
+       height: '100px',
+       opacity: 1,
+       backgroundColor: 'yellow'
+     })),
+     state('closed', style({
+       height: '100px',
+       opacity: 0.5,
+       backgroundColor: 'green'
+     })),
+     transition('open => closed', [
+       animate('1s')
+     ]),
+     transition('closed => open', [
+       animate('2.5s')
+     ]),
+   ])
+
  ]
 
 })
 export class AnalysispanelComponent implements OnInit {
+  //global variables
   // width:number;
    controlvar:string;
    width:number;
+   var:number;
    meravar=0;
+   array: string[];
 
+   bindingvar:number = 0;
+   isOpen = true;
 
 
   constructor() {
+    this.array = ['Ari', 'Carlos', 'Felipe', 'Nate'];
     }
+  toggle(){
+     return this.isOpen = !this.isOpen;
+  }
 
   ngAfterViewInit() {
+    setTimeout(()=>{this.toggle();this.width=50},2000);
+    setTimeout(()=>{this.toggle()},4000);
+    setTimeout(()=>{this.toggle()},7000);
 
-
-    setTimeout(()=>{this.width=187;this.controlvar='yes'},2000);
-    setTimeout(()=>{this.width=287;this.controlvar='yes'},6000);
+    // setTimeout(()=>{this.width=187;this.controlvar='yes'},2000);
+    // setTimeout(()=>{this.width=187;this.controlvar='no'},2000);
+    //
+    // setTimeout(()=>{this.width=287;this.controlvar='yes'},6000);
 
   }
 

@@ -4,7 +4,7 @@
                              Analysis Panel
                 </div>
 
-                <div class="linecontainer"><div @special class="hline"></div></div>
+                <div class="linecontainer"><div [@special]="isOpen ? 'open' : 'closed'" class="hline"></div></div>
                 <div>
                    <svg>
                         <rect
@@ -16,7 +16,7 @@
                             y="69.455124"
                             rx="186.61931"
                             ry="0" />
-                        <rect @special *ngIf="controlvar == 'yes'"
+                        <rect [@special]="isOpen ? 'open' : 'closed'"
                             style="opacity:1;vector-effect:none;fill:#00acee;fill-opacity:0.99215686;fill-rule:nonzero;stroke:#00acee;stroke-width:0.99942738;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99029122;marker-start:none;marker-end:none"
                             id="rect4558"
                             [attr.width]="width"
@@ -28,5 +28,21 @@
 
 
                   </svg>
+                </div>
+
+                <div class="flex flex-row min-w-full">
+                  <button (click)="toggle()" class="flex-1 bg-gray-500 font-bold text-white rounded-lg h-12 ">Press</button>
+
+                </div>
+
+                <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+                  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+                </div>
+
+
+                <div class="listcontainer text-white">
+                  <ul *ngFor="let element of array">
+                        <li>{{element}}</li>
+                  </ul>
                 </div>
 </div>
