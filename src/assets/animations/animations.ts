@@ -28,7 +28,12 @@ export let stretchout = trigger('stretchout',[
 
 export const soso = animation([
   style({
-  backgroundColor: '{{inputwidth }}'
+  width: '{{inputwidth }}px'
         }),
-  animate('{{time}}')
+  animate('{{time}}'),
+  style({
+  width: '{{next}}px'
+  }),
+  animate('{{time}}'),
+
 ])

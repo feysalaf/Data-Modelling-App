@@ -18,7 +18,7 @@ import { trigger, state, style, transition, animate, useAnimation } from '@angul
       transition('* => *',[
         useAnimation(soso,{
           params:{
-            inputwidth:'purple',time:'1000ms'
+            inputwidth:'*',time:'1000ms',next:'200'
           }
         })
 
