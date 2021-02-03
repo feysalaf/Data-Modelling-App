@@ -27,9 +27,8 @@ export let stretchout = trigger('stretchout',[
   animate(1800)])])
 
 export const soso = animation([
-    transition('* => *',[
-
-      style({width:"*"}),
-      animate(1800,style({  width: '{{ inputwidth }}'}))
-    ])
-  ])
+  style({
+  backgroundColor: '{{inputwidth }}'
+        }),
+  animate('{{time}}')
+])

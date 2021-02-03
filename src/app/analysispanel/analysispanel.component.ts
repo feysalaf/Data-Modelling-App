@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { fade, stretchout  } from '../../assets/animations/animations';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { fade, stretchout,soso  } from '../../assets/animations/animations';
+import { trigger, state, style, transition, animate, useAnimation } from '@angular/animations';
 
 @Component({
   selector: 'app-analysispanel',
@@ -16,8 +16,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       // animate(2200)]),
 
       transition('* => *',[
-      style({width:'*'}),
-      animate(1800,style({width:"100%"})),
+        useAnimation(soso,{
+          params:{
+            inputwidth:'purple',time:'1000ms'
+          }
+        })
+
 
     ])]),
 
