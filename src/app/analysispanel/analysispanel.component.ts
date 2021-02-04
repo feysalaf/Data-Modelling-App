@@ -72,7 +72,7 @@ export class AnalysispanelComponent implements OnInit {
   //   return new Promise(resolve =>; setTimeout(resolve, ms))};
 
   async sleep(ms: number) {
-      await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
+      await new Promise(resolve => setTimeout(()=>resolve(), ms)).then();
   }
   animate_svg(i:number=0,f:number = 187){
     //default goes to 0
@@ -88,7 +88,7 @@ export class AnalysispanelComponent implements OnInit {
           i++;
           this.width = i;
         }
-      },20);
+      },18);
     }
     if(i>f){
       let animate = setInterval(()=>{
@@ -102,7 +102,7 @@ export class AnalysispanelComponent implements OnInit {
           i--;
           this.width = i;
         }
-      },20);
+      },18);
 
     }
 
