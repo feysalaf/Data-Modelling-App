@@ -68,11 +68,12 @@ export class AnalysispanelComponent implements OnInit {
      return this.isOpen = !this.isOpen;
   }
 
-  animate_svg(pervious:number){
-    console.log(pervious);
-    let pos:number = pervious;
+  animate_svg(input:number=0){
+    //default goes to 0
+    console.log(input);
+    let pos:number = input;
     let animate = setInterval(()=>{
-      if(pos == 200){
+      if(pos == 187){
         clearInterval(animate);
       }
       else{
@@ -87,7 +88,8 @@ export class AnalysispanelComponent implements OnInit {
   ngAfterViewInit() {
     let pre:number = 50;
     setTimeout(()=>{this.toggle();},2000);
-    setTimeout(()=>{this.animate_svg(pre)},5000);
+    // setTimeout(()=>{this.animate_svg(pre)},5000);
+
     // setTimeout(()=>{this.toggle()},4000);
     // setTimeout(()=>{this.toggle()},7000);
 
