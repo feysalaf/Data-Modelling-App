@@ -160,6 +160,7 @@ export class AnalysispanelComponent implements OnInit {
 
 
   AnimateCircle(startangle,endangle=0){
+    let counter = 0;
     let animatecircle = setInterval(()=>{
       //run till the end from the input, if num is
       //>0 on start, animate once from 0 to num and
@@ -170,29 +171,46 @@ export class AnalysispanelComponent implements OnInit {
       else{
         startangle++;
         //get x and y
-        let end = this.PolartoCartesian(28,startangle);
+        // let end = this.PolartoCartesian(28.471159,startangle);
+        var start = this.polarToCartesian(12.1217, 52.424, 28.471159, endangle);
+
+        let end = this.polarToCartesian(12.1217,52.424,28.471159,startangle);
         //declare constants
         //M 12.121704,52.424849 A 28.471159,28.590176 0 0 1 6.5393829,14.279842
         let xpos      = 12.121704;
         let ypos      = 52.424849;
-        let xradius   = 28;
-        let yradius   = 28;
+        let xradius   = 28.471159;
+        let yradius   = 28.590176;
         let xrotation = 0;
         let largearc  = 0;
         let sweep     = 1;
+        // var largearc = endangle - startangle <= 180 ? "0" : "1";
+        if(counter == 0){
         var d = [
         "M", xpos, ypos,
         "A", xradius, yradius, xrotation, largearc, sweep, end.x, end.y
           ].join(" ");
         //return path to html
+        // console.log(d);
         this.path = d;
+        counter++;
+      }
+        else{
+          let b = [" ", xradius, yradius, xrotation, largearc, sweep, end.x, end.y
+                  ].join(" ");
+
+          this.path = this.path + b;
+          counter++;
+
+        }
+
       }
     },20);
 
   }
 
   anima(){
-    this.AnimateCircle(90,180);
+    this.AnimateCircle(0,180);
   }
 
 
