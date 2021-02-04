@@ -18,7 +18,7 @@ import { trigger, state, style, transition, animate, useAnimation } from '@angul
       transition('* => *',[
         useAnimation(soso,{
           params:{
-            inputwidth:'*',time:'1000ms',next:'200'
+            inputwidth:'100',time:'1000ms',next:'300'
           }
         })
 
@@ -67,11 +67,26 @@ export class AnalysispanelComponent implements OnInit {
   toggle(){
      return this.isOpen = !this.isOpen;
   }
+  animate_svg(){
+    let elem = document.querySelector('#recta');
+    let pos:number = 0;
+    let animate = setInterval(()=>{
+      if(pos == 200){
+        clearInterval(animate);
+      }
+      else{
+        pos++;
+        this.width = pos;
+      }
+    },20)
+  }
+
+
 
   ngAfterViewInit() {
     setTimeout(()=>{this.toggle();this.width=50},2000);
-    setTimeout(()=>{this.toggle()},4000);
-    setTimeout(()=>{this.toggle()},7000);
+    // setTimeout(()=>{this.toggle()},4000);
+    // setTimeout(()=>{this.toggle()},7000);
 
     // setTimeout(()=>{this.width=187;this.controlvar='yes'},2000);
     // setTimeout(()=>{this.width=187;this.controlvar='no'},2000);
