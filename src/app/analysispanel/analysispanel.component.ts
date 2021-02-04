@@ -76,7 +76,6 @@ export class AnalysispanelComponent implements OnInit {
   }
   animate_svg(i:number=0,f:number = 187){
     //default goes to 0
-    console.log(i);
     if(i<f){
       let animate = setInterval(()=>{
         //run till the end from the input, if num is
@@ -113,12 +112,12 @@ export class AnalysispanelComponent implements OnInit {
     let array=[50,30,40,90,100,150,40,23];
     for(let i = 0;i< array.length; i++){
       if(i==0){
-        await this.sleep(2000);
+        await this.sleep(7000);
         this.animate_svg(0,array[i]);
         // setTimeout(()=>{this.animate_svg(0,array[i])},2000);
       }
       else{
-        await this.sleep(2000);
+        await this.sleep(4000);
         let init:number  = array[i-1];
         let final:number = array[i];
         console.log("Attempting after 0");
@@ -128,7 +127,6 @@ export class AnalysispanelComponent implements OnInit {
         console.log(final);
 
         this.animate_svg(init,final);
-        await this.sleep(2000);
 
         // setTimeout(()=>{this.animate_svg(array[i-1],array[i])},2000);
       }
@@ -144,6 +142,7 @@ export class AnalysispanelComponent implements OnInit {
     setTimeout(()=>{this.toggle();},2000);
     setTimeout(()=>{this.animate_svg(0,187)},2000);
     setTimeout(()=>{this.animate_svg(187,0)},10000);
+    setTimeout(()=>{this.animate_array()},15000);
 
 
     // setTimeout(()=>{this.animate_svg(pre)},5000);
