@@ -68,19 +68,73 @@ export class AnalysispanelComponent implements OnInit {
      return this.isOpen = !this.isOpen;
   }
 
-  animate_svg(input:number=0){
+  // sleep(ms: number) {
+  //   return new Promise(resolve =>; setTimeout(resolve, ms))};
+
+  async sleep(ms: number) {
+      await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
+  }
+  animate_svg(i:number=0,f:number = 187){
     //default goes to 0
-    console.log(input);
-    let pos:number = input;
-    let animate = setInterval(()=>{
-      if(pos == 187){
-        clearInterval(animate);
+    console.log(i);
+    if(i<f){
+      let animate = setInterval(()=>{
+        //run till the end from the input, if num is
+        //>0 on start, animate once from 0 to num and
+        //then animate rest
+        if(i == f){
+          clearInterval(animate);
+        }
+        else{
+          i++;
+          this.width = i;
+        }
+      },20);
+    }
+    if(i>f){
+      let animate = setInterval(()=>{
+        //run till the end from the input, if num is
+        //>0 on start, animate once from 0 to num and
+        //then animate rest
+        if(i == f){
+          clearInterval(animate);
+        }
+        else{
+          i--;
+          this.width = i;
+        }
+      },20);
+
+    }
+
+  }
+
+  async animate_array(){
+    let array=[50,30,40,90,100,150,40,23];
+    for(let i = 0;i< array.length; i++){
+      if(i==0){
+        await this.sleep(2000);
+        this.animate_svg(0,array[i]);
+        // setTimeout(()=>{this.animate_svg(0,array[i])},2000);
       }
       else{
-        pos++;
-        this.width = pos;
+        await this.sleep(2000);
+        let init:number  = array[i-1];
+        let final:number = array[i];
+        console.log("Attempting after 0");
+        console.log("The starting is");
+        console.log(init);
+        console.log("The ending is");
+        console.log(final);
+
+        this.animate_svg(init,final);
+        await this.sleep(2000);
+
+        // setTimeout(()=>{this.animate_svg(array[i-1],array[i])},2000);
       }
-    },20)
+
+    }
+
   }
 
 
@@ -88,6 +142,10 @@ export class AnalysispanelComponent implements OnInit {
   ngAfterViewInit() {
     let pre:number = 50;
     setTimeout(()=>{this.toggle();},2000);
+    setTimeout(()=>{this.animate_svg(0,187)},2000);
+    setTimeout(()=>{this.animate_svg(187,0)},10000);
+
+
     // setTimeout(()=>{this.animate_svg(pre)},5000);
 
     // setTimeout(()=>{this.toggle()},4000);
