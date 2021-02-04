@@ -60,6 +60,9 @@ export class AnalysispanelComponent implements OnInit {
    bindingvar:number = 0;
    isOpen = true;
 
+   //circular progress
+   path:string;
+
 
   constructor() {
     this.array = ['Ari', 'Carlos', 'Felipe', 'Nate'];
@@ -135,14 +138,73 @@ export class AnalysispanelComponent implements OnInit {
 
   }
 
+  ////////        Circle Animation        ////////
+
+
+  PolartoCartesian(r,theta){
+    var angleInRadians = (theta-90) * Math.PI / 180.0;
+
+  return{
+    x: (r * Math.cos(angleInRadians)),
+    y: (r * Math.sin(angleInRadians))};
+  }
+
+  polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+  let angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+
+  AnimateCircle(startangle,endangle=0){
+    let animatecircle = setInterval(()=>{
+      //run till the end from the input, if num is
+      //>0 on start, animate once from 0 to num and
+      //then animate rest
+      if(startangle == endangle){
+        clearInterval(animatecircle);
+      }
+      else{
+        startangle++;
+        //get x and y
+        let end = this.PolartoCartesian(28,startangle);
+        //declare constants
+        //M 12.121704,52.424849 A 28.471159,28.590176 0 0 1 6.5393829,14.279842
+        let xpos      = 12.121704;
+        let ypos      = 52.424849;
+        let xradius   = 28;
+        let yradius   = 28;
+        let xrotation = 0;
+        let largearc  = 0;
+        let sweep     = 1;
+        var d = [
+        "M", xpos, ypos,
+        "A", xradius, yradius, xrotation, largearc, sweep, end.x, end.y
+          ].join(" ");
+        //return path to html
+        this.path = d;
+      }
+    },20);
+
+  }
+
+  anima(){
+    this.AnimateCircle(90,180);
+  }
+
+
 
 
   ngAfterViewInit() {
     let pre:number = 50;
     setTimeout(()=>{this.toggle();},2000);
-    setTimeout(()=>{this.animate_svg(0,187)},2000);
-    setTimeout(()=>{this.animate_svg(187,0)},10000);
-    setTimeout(()=>{this.animate_array()},15000);
+    //setTimeout(()=>{this.AnimateCircle(90,180)},5000);
+    // setTimeout(()=>{this.animate_svg(0,187)},2000);
+    // setTimeout(()=>{this.animate_svg(187,0)},10000);
+    // setTimeout(()=>{this.animate_array()},15000);
 
 
     // setTimeout(()=>{this.animate_svg(pre)},5000);
