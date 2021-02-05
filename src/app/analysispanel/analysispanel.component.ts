@@ -62,6 +62,8 @@ export class AnalysispanelComponent implements OnInit {
 
    //circular progress
    path:string;
+   stroke:number=120;
+
 
 
   constructor() {
@@ -252,6 +254,13 @@ export class AnalysispanelComponent implements OnInit {
         }
       }
     },20);
+
+  }
+
+
+  animate_circular_progress(i:number,f:number){
+    //here f is the full length of arc and
+    //and i is the required % to progress
 
   }
 
