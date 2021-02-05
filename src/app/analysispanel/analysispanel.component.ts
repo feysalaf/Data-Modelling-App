@@ -62,7 +62,7 @@ export class AnalysispanelComponent implements OnInit {
 
    //circular progress
    path:string;
-   stroke:number=120;
+   stroke:number;
 
 
 
@@ -257,19 +257,54 @@ export class AnalysispanelComponent implements OnInit {
 
   }
 
+  NormalizeToScale(input:number,max:number,scale:number){
+    return (max - ((max*input)/scale) );
+  };
+
 
   animate_circular_progress(i:number,f:number){
-    //here f is the full length of arc and
-    //and i is the required % to progress
+    //here i is where to start the progress
+    //and f is where to end it
+    let start;
+    let end;
+    start = this.NormalizeToScale(i,146,100);
+    end   = this.NormalizeToScale(f,146,100);
+
+    let animateprogress = setInterval(()=>{
+
+      if(start<end){
+
+        if(start==end){
+          clearInterval(animateprogress);
+        }
+        else{
+          start++;
+          this.stroke = start;
+        }
+      }
+      if(start>end){
+        if(start==end){
+          clearInterval(animateprogress);
+        }
+        else{
+          start--;
+          this.stroke = start;
+        }
+      }
+    },20);
+
 
   }
 
   async anima(){
     // this.AnimateCircle(90,180);
     // await this.sleep(4000);
-    this.AnimateCircle(0,270);
+    // this.AnimateCircle(0,270);
     // await this.sleep(4000);
     // this.AnimateCircle(0,140);
+
+    this.animate_circular_progress(0,100);
+    
   }
 
 
