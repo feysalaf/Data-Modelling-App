@@ -149,14 +149,20 @@ export class AnalysispanelComponent implements OnInit {
     y: (r * Math.sin(angleInRadians))};
   }
 
+  //this function centers thecircle at the given starting point
+  //BUG
   polarToCartesian(centerX, centerY, radius, angleInDegrees) {
   let angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
 
   return {
     x: centerX + (radius * Math.cos(angleInRadians)),
     y: centerY + (radius * Math.sin(angleInRadians))
-  };
-}
+    };
+  }
+
+  GetCenterOfCircle(pointoncircumference){
+
+  }
 
 
   AnimateCircle(startangle,endangle=0){
@@ -172,9 +178,9 @@ export class AnalysispanelComponent implements OnInit {
         startangle++;
         //get x and y
         // let end = this.PolartoCartesian(28.471159,startangle);
-        var start = this.polarToCartesian(12.1217, 52.424, 28.471159, endangle);
+        // var start = this.polarToCartesian(12.1217, 52.424, 28.471159, endangle);
 
-        let end = this.polarToCartesian(12.1217,52.424,28.471159,startangle);
+        let end = this.polarToCartesian(40.59,52.424,28.471159,startangle);
         //declare constants
         //M 12.121704,52.424849 A 28.471159,28.590176 0 0 1 6.5393829,14.279842
         let xpos      = 12.121704;
@@ -210,7 +216,7 @@ export class AnalysispanelComponent implements OnInit {
   }
 
   anima(){
-    this.AnimateCircle(0,180);
+    this.AnimateCircle(90,180);
   }
 
 
