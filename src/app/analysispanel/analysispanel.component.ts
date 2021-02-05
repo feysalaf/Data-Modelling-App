@@ -62,8 +62,10 @@ export class AnalysispanelComponent implements OnInit {
 
    //circular progress
    path:string;
-   stroke:number;
-
+   circularprog1:number;
+   circularprog2:number;
+   circularprog3:number;
+   circularprog4:number;
 
 
   constructor() {
@@ -261,14 +263,16 @@ export class AnalysispanelComponent implements OnInit {
     return (max - ((max*input)/scale) );
   };
 
-
-  animate_circular_progress(i:number,f:number){
+  // TODO: implement generality in a better way
+  //it has something to do with passing reference by value
+  animate_circular_progress(i:number,f:number,cp:number){
     //here i is where to start the progress
     //and f is where to end it
     let start;
     let end;
     start = this.NormalizeToScale(i,146,100);
     end   = this.NormalizeToScale(f,146,100);
+  
 
     let animateprogress = setInterval(()=>{
 
@@ -279,7 +283,25 @@ export class AnalysispanelComponent implements OnInit {
         }
         else{
           start++;
-          this.stroke = start;
+          //horrible code
+          switch (cp) {
+            case 1:
+            this.circularprog1 = start;
+            break;
+
+            case 2:
+            this.circularprog2 = start;
+            break;
+
+            case 3:
+            this.circularprog3 = start;
+            break;
+
+            case 4:
+            this.circularprog4 = start;
+            break;
+            }
+
         }
       }
       if(start>end){
@@ -288,7 +310,25 @@ export class AnalysispanelComponent implements OnInit {
         }
         else{
           start--;
-          this.stroke = start;
+          //horrible code
+          switch (cp) {
+            case 1:
+            this.circularprog1 = start;
+            break;
+
+            case 2:
+            this.circularprog2 = start;
+            break;
+
+            case 3:
+            this.circularprog3 = start;
+            break;
+
+            case 4:
+            this.circularprog4 = start;
+            break;
+            }
+
         }
       }
     },20);
@@ -296,15 +336,18 @@ export class AnalysispanelComponent implements OnInit {
 
   }
 
-  async anima(){
+  anima(){
     // this.AnimateCircle(90,180);
     // await this.sleep(4000);
     // this.AnimateCircle(0,270);
     // await this.sleep(4000);
     // this.AnimateCircle(0,140);
 
-    this.animate_circular_progress(0,100);
-    
+    this.animate_circular_progress(0,100,1);
+    this.animate_circular_progress(50,100,2);
+    this.animate_circular_progress(0,50,3);
+    this.animate_circular_progress(0,10,4);
+
   }
 
 
