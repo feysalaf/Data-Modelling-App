@@ -8,6 +8,7 @@
 /*import the styles for the latex*/
 /* @import 'katex/dist/katex.css'; */
 
+
 /* .open-close-container {
   border: 1px solid #dddddd;
   margin-top: 1em;
@@ -16,15 +17,55 @@
   font-weight: bold;
   font-size: 20px;
 } */
-
+/*
 .txt{
     width:100%;
     font-size: 1.1rem;
     border:  1px solid grey;
+} */
+
+                        /*IMPORTING FONTS */
+
+@font-face {
+  font-family: lato-regular;
+  src: url("../../assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: lato-light;
+  src: url("../../assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: lato-thin;
+  src: url("../../assets/fonts/Lato/Lato-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: lato-bold;
+  src: url("../../assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+
+
+.textheading{
+  font-family: 'lato-bold';
+  font-size:28px;
+}
+
+.textannotation{
+  font-family:'lato-light';
+  font-size:20px;
+  font-weight:700;
+  color:white;
+
+}
+
+.textparagraph{
+  font-family: 'lato-regular';
+  font-size:27px;
+  color:white;
+}
+
 .box {
     display: block;
-    color:white;
 }
 
 .hline{
@@ -45,8 +86,7 @@
 .flex_0_1{
   background-color:#433F40;
   height:60px;
-  font-family: noto sans light;
-  font-size:30px;
+  /* font-size:30px; */
   color:white;
 }
 
@@ -59,9 +99,6 @@
 .flex_0_6{
   justify-content: space-between;
 
-  font-family:ubuntu;
-  font-weight: 500;
   border:1px solid gray;
 
-  font-size:18px;
 }
