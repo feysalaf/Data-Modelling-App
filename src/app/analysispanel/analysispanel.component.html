@@ -157,6 +157,8 @@
 
 
                 <div>
+                  <textarea class='txt' rows="8" placeholder="Enter text here..." [(ngModel)]="mathContent"></textarea>
+                  <app-mathjx [content]='mathContent' class="box"></app-mathjx>
                 </div>
 
 <!--

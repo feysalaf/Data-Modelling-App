@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 //external imports
 import { ChartsModule } from 'ng2-charts';
 // import { ChartModule } from 'angular2-chartjs';
@@ -33,6 +33,7 @@ import { MathjxComponent } from './mathjx/mathjx.component';
     AppRoutingModule,
     ChartsModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [   ],
   bootstrap: [AppComponent]

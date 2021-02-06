@@ -17,6 +17,16 @@
   font-size: 20px;
 } */
 
+.txt{
+    width:100%;
+    font-size: 1.1rem;
+    border:  1px solid grey;
+}
+.box {
+    border:  1px solid black;
+    display: block
+}
+
 .hline{
    flex:1;
    display: block;
