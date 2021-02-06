@@ -5,6 +5,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+/*import the styles for the latex*/
+/* @import 'katex/dist/katex.css'; */
 
 /* .open-close-container {
   border: 1px solid #dddddd;

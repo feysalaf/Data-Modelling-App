@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //external imports
 import { ChartsModule } from 'ng2-charts';
 // import { ChartModule } from 'angular2-chartjs';
+//for latex
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { VerticalsidebarComponent } from './verticalsidebar/verticalsidebar.comp
 import { TerminalpipeComponent } from './terminalpipe/terminalpipe.component';
 import { AnimationbarComponent } from './animationbar/animationbar.component';
 import { AnalysispanelComponent } from './analysispanel/analysispanel.component';
+import { MathjxComponent } from './mathjx/mathjx.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,14 @@ import { AnalysispanelComponent } from './analysispanel/analysispanel.component'
     VerticalsidebarComponent,
     TerminalpipeComponent,
     AnimationbarComponent,
-    AnalysispanelComponent
+    AnalysispanelComponent,
+    MathjxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [   ],
   bootstrap: [AppComponent]
