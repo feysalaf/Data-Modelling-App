@@ -150,16 +150,19 @@
                   </div>
                 </div>
 
+
+                <div class="mt-10">
+                  <!-- <textarea class='txt' rows="8" placeholder="Enter text here..." [(ngModel)]="mathContent"></textarea> -->
+                  <app-mathjx [content]='mathContent' class="box"></app-mathjx>
+                </div>
+
                 <div class="flex flex-row min-w-full mt-64 ">
                   <button (click)="anima()" class="flex-1 bg-blue-500 font-bold text-white rounded-lg h-12 ">Press</button>
 
                 </div>
 
 
-                <div>
-                  <textarea class='txt' rows="8" placeholder="Enter text here..." [(ngModel)]="mathContent"></textarea>
-                  <app-mathjx [content]='mathContent' class="box"></app-mathjx>
-                </div>
+
 
 <!--
                 <div class="mt-3">

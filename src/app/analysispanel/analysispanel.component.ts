@@ -71,11 +71,9 @@ export class AnalysispanelComponent implements OnInit {
    paragraphs: string = `
     You can write text, that contains expressions like this: $x ^ 2 + 5$ inside them. As you probably know.
     You also can write expressions in display mode as follows: $$\\sum_{i=1}^n(x_i^2 - \\overline{x}^2)$$.
-    In first case you will need to use \\$expression\\$ and in the second one \\$\\$expression\\$\\$.
-    To scape the \\$ symbol it's mandatory to write as follows: \\\\$
   `;
 
-    mathContent:string = `When $ a \\ne 0 $, there are two solutions to $ ax^2 + bx + c = 0 $ and they are $$ x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$$`;
+    mathContent:string = `Normalization here is done by taking the maximum and minimum values in the formula $ f(i)$ where $f$ is a function that takes an $i$ input and returns it's normalized value between $0$ and $1$ as follows: $$f(i) = \\frac{i - \\text{min}}{\\text{max - min}} $$ Afterwards the value can be scaled up to be normalized in any approriate range as required or just be used as it is.`;
 
 
   constructor() {
