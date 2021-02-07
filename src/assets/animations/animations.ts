@@ -46,3 +46,15 @@ export let colorfadeinout = trigger('colorfadeinout',[
   animate(3500),
   style({"color":"#00ACEE"}),
   animate(2200,style({"color":"#B5B5B5"}))])])
+
+
+export let fillfadeinout = trigger('colorfadeinout',[
+
+  // transition('void <=> *',[
+  // style({opacity:0}),
+  // animate(2200)]),
+
+  transition('* => *',[
+  animate(3500),
+  style({"fill":"#00ACEE"}),
+  animate(2200,style({"fill":"#B5B5B5"}))])])
