@@ -43,6 +43,6 @@ export let colorfadeinout = trigger('colorfadeinout',[
   // animate(2200)]),
 
   transition('* => *',[
-  animate(2000),
+  animate(3500),
   style({"color":"#00ACEE"}),
   animate(2200,style({"color":"#B5B5B5"}))])])
