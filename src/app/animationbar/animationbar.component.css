@@ -14,16 +14,28 @@
   gap:20px;
 
 }
+.flex_child_container{
+  flex:1;
+  /* background-color:#433F40; */
+}
+.subchild1_1{
+  background-color:#433F40;
+  height:60px;
+}
 
+.subchild1_2{
+  background-color:#252223;
+}
 .child_one{
-   flex:1;
-  border-radius: 30px;
+
 }
 
 .child_two{
-  background-color:#FFFFFF;
-  height:60px;
-  border-radius: 5px;
+
+}
+
+.child_three{
+
 }
 
 .hline_container{
@@ -46,7 +58,7 @@
    height: 1px;
    border: 0;
    border-top:1px solid #00ACEE;
-   margin: 10px auto 0px auto;
+   margin: 0px auto 0px auto;
    padding: 0;
    width:80%;
 }

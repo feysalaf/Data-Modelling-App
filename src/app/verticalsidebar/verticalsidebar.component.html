@@ -1,38 +1,58 @@
 <div class="flex_container ">
-<div   class=" box box-border box1 shadow-md bg-blue-200 text-center "> <div class="text-4xl mt-4
-    text font-bold text-gray-700">Console Output</div>
-<div @stretchout class="hline"></div>
-<div class="p-8 ml-2 text-left ">
-  <div @fade class="flex_button_container mb-4 ">
+            <div class=" box-border box1 shadow-md  backgroundcolboxA text-center ">
+                          <!-- <div class="text-4xl mt-4
+                              text font-bold bg-red-500 text-white ">Console Output</div> -->
+                  <div class="box1flexcontainer flex-col">
+                          <div    class="subchild1_1  textheading rounded-t-lg flex justify-center content-center inset-0 items-center     text-center  ">
+                                     Console Panel
+                          </div>
+                          <div class="linecontainer"><div @stretchout class="hline"></div></div>
 
-    <button  class="buttonfont boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-indigo-500 text-center ">Execute</button>
+                          <div class=" box1childcflexcontainer p-4 flex-1 text-left">
+                                          <table class="ml-0 gap-2 bg-orange-500 flex-grow">
+                                                  <tr>
+                                                    <td> 231 </td>
+                                                    <td><div @fade class="colbox animate-pulse"></div></td>
+                                                    <td class="bold-text">TEMPERATURE   </td>
+                                                    <td class="ml-3 accent-text">&#176; C  </td>
+                                                  </tr>
 
+                                                  <tr>
+                                                    <td>23 </td>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">VELOCITY  </td>
+                                                    <td class="ml-3 accent-text">km/h  </td>
+                                                  </tr>
 
-  </div>
+                                                  <tr>
+                                                    <td> UNDEFINED </td>
+                                                    <td><div @fade class="colbox"></div></td>
+                                                    <td class="bold-text">DENSITY  </td>
+                                                    <td class="accent-text">&#181;g/m<sup>3</sup>  </td>
+                                                  </tr>
 
-<table class="ml-5">
-<tr>
-  <td class="font-bold">Output:  </td>
-  <td> {{output}} </td>
-</tr>
-<tr></tr>
-</table>
- </div>
- </div>
- <div   class=" box box-border box2 shadow-md bg-blue-300 text-center">
-   <div class="text-4xl mt-4
-      text font-bold text-gray-700">Box 2</div> <div @stretchout class="hline"></div>
-      <div class="p-2  ml-8 mr-8 mb-4 text-left ">
-        Press create to form a new project and press delete to remove existing.
-        </div>
-      <div @fade class="flex_button_container ">
+                                                  <tr>
+                                                  </tr>
+                                          </table>
 
-        <div class=" boxbutton order-1 box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-red-500 text-center ">Delete</div>
-        <div class=" boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-green-500 text-center ">Create</div>
+                                      <div @fade class="flex_button_container mb-4  ">
+                                                  <button  class="buttonfont boxbutton bg-blue-500  box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white text-center ">Execute</button>
+                                      </div>
+                          </div>
+                  </div>
+             </div>
 
+             <!-- <div   class=" box box-border box2 shadow-md backgroundcolboxA text-center">
+                           <div class="text-4xl mt-4
+                              text font-bold text-white">Box 2</div>
+                           <div @stretchout class="hline"></div>
+                           <div class="p-2  ml-8 mr-8 mb-4 text-left ">
+                                Press create to form a new project and press delete to remove existing.
+                           </div>
+                           <div @fade class="flex_button_container ">
+                                      <div class=" boxbutton order-1 box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-red-500 text-center ">Delete</div>
+                                      <div class=" boxbutton box-border inset-0 font-sans justify-center text-2xl  font-bold flex items-center  text-white bg-green-500 text-center ">Create</div>
+                           </div>
 
-      </div>
-
-
-</div>
+            </div> -->
 </div>

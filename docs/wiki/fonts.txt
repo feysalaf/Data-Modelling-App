@@ -1,0 +1,8 @@
+USAGE:
+-@font-face {
+  font-family: iosevka-regular;
+  src: url(../../assets/fonts/iosevka-regular.ttf) format("truetype");
+}
+
+Above is an example of the way to import a custom font, this is done so in
+the component css file where it can be used accordingly.

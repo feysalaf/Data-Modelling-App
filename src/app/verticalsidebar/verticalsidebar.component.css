@@ -4,9 +4,62 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+/*IMPORTING FONTS */
+
+@font-face {
+font-family: lato-regular;
+src: url("../../assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: lato-light;
+src: url("../../assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+font-family: lato-thin;
+src: url("../../assets/fonts/Lato/Lato-Thin.ttf") format("truetype");
+}
+@font-face {
+font-family: lato-bold;
+src: url("../../assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
 
 
 
+.textheading{
+font-family: 'lato-bold';
+font-size:28px;
+}
+
+.textannotation{
+font-family:'lato-light';
+font-size:20px;
+font-weight:700;
+color:white;
+
+}
+
+.textparagraph{
+font-family: 'lato-regular';
+font-size:27px;
+color:white;
+}
+.colbox{
+  @apply h-6 shadow-2xl  ;
+  width:15px;
+  border-radius: 3px;
+  margin-right:4px;
+  background-color:#00ACEE;
+}
+
+.bold-text{
+  font-family:ubuntu ;
+  font-weight: 500;
+}
+.accent-text{
+  font-family:ubuntu ;
+  font-weight: 500;
+  color:#00ACEE;
+}
 .flex_container{
   display: flex;
   gap:20px;
@@ -14,13 +67,37 @@
   width: 100%;
   height: 100%;
 }
+.box1flexcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.box1childcflexcontainer{
+  display: flex;
+  gap:20px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%
+}
 .box{
   @apply rounded-lg;
   flex:1;
  }
 
+ .backgroundcolboxA{
+   background-color: #2D2A2B;
+ }
+ .subchild1_1{
+   background-color:#433F40;
+   height:60px;
+ }
  .box1{
    flex-grow: 2;
+ }
+ .flexinfo{
+   flex-grow:1;
  }
  .flex_button_container{
    display: flex;
@@ -38,6 +115,10 @@
 
 table{
   font-family: noto sans light;
+  font-size:26px;
+  /* border-spacing: 0 15px; */
+  border-collapse: separate;
+ border-spacing: 50px 0;
 }
 
 button{
@@ -45,11 +126,12 @@ button{
 }
 
 .buttonfont{
-  font-family: noto sans light;
-  width:100%;
+      font-family: noto sans light;
+      width:100%;
+      /* background-color: #00ACEE; */
 
 }
- hr {
+ /* hr {
      display: block;
      height: 1px;
      border: 0;
@@ -57,15 +139,15 @@ button{
      margin: 10px auto 0px auto;
      padding: 0;
      width:80%;
- }
+ } */
 
  .hline{
-   flex:1;
+    flex:1;
     display: block;
     height: 1px;
     border: 0;
     border-top:1px solid gray;
-    margin: 10px auto 0px auto;
+    margin: 0px auto 0px auto;
     padding: 0;
     width:80%;
  }

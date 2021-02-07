@@ -29,9 +29,12 @@ export class AnimationbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+            //fetch variable from backend
 
 
             let getchart = document.querySelector('.mylinechart') as HTMLCanvasElement;
+            let getchart1 = document.querySelector('.mylinecharta') as HTMLCanvasElement;
+            let getchart2 = document.querySelector('.mylinechartb') as HTMLCanvasElement;
 
             var data = {
                  datasets: [
@@ -59,8 +62,6 @@ export class AnimationbarComponent implements OnInit {
             };
             let loop_n = 0;
 
-
-
             var option = {
             	showLines: true,
               scales:{xAxes:[{type:'realtime',realtime:{
@@ -70,17 +71,10 @@ export class AnimationbarComponent implements OnInit {
                     pause:false,
                     onRefresh:()=>{
                        data.datasets.forEach((dataset: any)=> {
-
                          dataset.data.push({
-
                            x: Date.now(),
-
                            y: Math.random()
-
                          });
-
-
-
                        });
 
                       // loop_n = loop_n + 1;
@@ -89,7 +83,14 @@ export class AnimationbarComponent implements OnInit {
                       // data.datasets[0].data.push({x:Math.random()});
                       // console.log(data.datasets[0].data);
                     }
-              }}]}};
+              }}]},
+
+              legend: {
+                  display: false
+                  }
+
+
+            };
 
 
         // var plugin= {
@@ -109,6 +110,18 @@ export class AnimationbarComponent implements OnInit {
 
 
             var create_chart = new Chart(getchart,{
+              type:'line',
+              data:data,
+              options:option,
+              // plugins: plugin
+            })
+            var create_chart1 = new Chart(getchart1,{
+              type:'line',
+              data:data,
+              options:option,
+              // plugins: plugin
+            })
+            var create_chart2 = new Chart(getchart2,{
               type:'line',
               data:data,
               options:option,

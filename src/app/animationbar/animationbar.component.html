@@ -1,26 +1,61 @@
 
 <div class="parentcontainer text-center">
 
+          <div class="flex_child_container">
+                  <div    class="child_one flex-col p-0  text-center">
+                          <div    class=" subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
+                                     Temperature
+                          </div>
 
-        <div    class="child_one text-center">
-          <div    class=" text-2xl mt-4 font-bold  text-center  text">
-                     Graphing Panel
+                          <div @stretchout class="hline"></div>
+                          <!-- Add the chart -->
+
+
+                          <div class="p-3 subchild1_2 shadow-xl ">
+                                  <canvas class="mylinechart" chart-data="cdata"
+                                  width="800" height="300">
+                                  </canvas>
+                          </div>
+
+                  </div>
           </div>
 
-          <div @stretchout class="hline"></div>
-          <!-- Add the chart -->
+          <div class="flex_child_container">
+                  <div    class="child_one flex-col p-0  text-center">
+                          <div    class=" subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
+                                     Velocity
+                          </div>
+
+                          <div @stretchout class="hline"></div>
+                          <!-- Add the chart -->
 
 
-                <div class="mt-10">
-                        <canvas class="mylinechart" chart-data="cdata"
-                        width="800" height="300">
-                        </canvas>
-                </div>
+                          <div class="p-3 subchild1_2 shadow-xl ">
+                                  <canvas class="mylinecharta" chart-data="cdata1"
+                                  width="800" height="300">
+                                  </canvas>
+                          </div>
 
-        </div>
+                  </div>
+          </div>
 
-                <div  class="child_two">
-                 </div>
+          <div class="flex_child_container">
+                  <div    class="child_one flex-col p-0  text-center">
+                            <div    class=" subchild1_1 text-2xl rounded-t-lg flex justify-center content-center inset-0 items-center  font-bold  text-center  text">
+                                       Density
+                            </div>
 
+                  <div @stretchout class="hline"></div>
+                    <!-- Add the chart -->
+
+
+                  <div class="p-3 subchild1_2 shadow-xl ">
+                            <canvas class="mylinechartb" chart-data="cdata2"
+                            width="800" height="300">
+                            </canvas>
+                  </div>
+
+                  </div>
+          </div>
 
 </div>

@@ -12,7 +12,9 @@ import * as io from 'socket.io-client';
 export class VerticalsidebarComponent implements OnInit {
 
   //initialize html vars
-  output:string;
+  temperature:number;
+  velocity:number;
+  density:number;
 
   constructor() {
 
@@ -44,7 +46,7 @@ export class VerticalsidebarComponent implements OnInit {
     socket.on( 'receivefromserver', (msg) => {
       console.log("Data received from server");
       //send to html
-      this.output = msg['data'];
+      // this.output = msg['data'];
     })
 }
 
