@@ -34,3 +34,15 @@ export const soso = animation([
   }),
 
 ])
+
+
+export let colorfadeinout = trigger('colorfadeinout',[
+
+  // transition('void <=> *',[
+  // style({opacity:0}),
+  // animate(2200)]),
+
+  transition('* => *',[
+  animate(2000),
+  style({"color":"#00ACEE"}),
+  animate(2200,style({"color":"#B5B5B5"}))])])
