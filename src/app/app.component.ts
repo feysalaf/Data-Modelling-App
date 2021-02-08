@@ -95,17 +95,24 @@ export class AppComponent {
         blue = b;
       }
       this.strandobject[strandnumber] = `rgb(${red},${green},${blue})`;
-    },20);
+    },15);
   }
 
     ngAfterViewInit() {
-
-      // setTimeout(()=>{this.updateProp();},2000);
+      var strand1 = 'one';
+      var strand2 = 'two';
+      var strand3 = 'three';
+      var strand4 = 'four';
+      this.animate_color_transition(180,181,181,0,172,238,strand1);
+      this.animate_color_transition(180,181,181,0,172,238,strand2);
+      this.animate_color_transition(180,181,181,0,172,238,strand3);
+      this.animate_color_transition(180,181,181,0,172,238,strand4);
       setTimeout(()=>{
-        // var mystring = 'one';
-        // console.log(this.dict[mystring]);
-        var strandnumber = 'one';
-        this.animate_color_transition(180,181,181,0,172,238,strandnumber);
+        this.animate_color_transition(0,172,238,180,181,181,strand1);
+        this.animate_color_transition(0,172,238,180,181,181,strand2);
+        this.animate_color_transition(0,172,238,180,181,181,strand3);
+        this.animate_color_transition(0,172,238,180,181,181,strand4);
+
       },3000);
 
     }
