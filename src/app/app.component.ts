@@ -7,16 +7,28 @@ import { fade, stretchout,colorfadeinout, fillfadeinout  } from '../assets/anima
   styleUrls: ['./app.component.css'],
   animations:[fade, stretchout, colorfadeinout, fillfadeinout]
 })
+
+
+//
+// type props = 'strand1col' | 'strand2col';
+//
+
+
+
 export class AppComponent {
   title = 'DataModellingInterface';
-  strand1col:string = `rgb(180,181,181)`;
-  strand2col:string = `rgb(180,181,181 )`;
-  strand3col:string = `rgb(180,181,181 )`;
-  strand4col:string = `rgb(180,181,181 )`;
+
+  strandobject = {
+    one    :`rgb(180,181,181)`,
+    two    :`rgb(180,181,181)`,
+    three  :`rgb(180,181,181)`,
+    four   : `rgb(180,181,181)`
+  }
+
+  constructor(){
 
 
-
-
+  }
 
   async sleep(ms: number) {
       await new Promise(resolve => setTimeout(()=>resolve(), ms)).then();
@@ -49,144 +61,54 @@ export class AppComponent {
   }
 
 
-  //
-  // getiterations(x:number,y:number,z:number,a:number,b:number,c:number){
-  //   // 0 , 172 , 238 -> 181,181,181
-  //   // subtract a from x, b from y and c from z
-  //   alpha = a-x;
-  //   beta  = b-y;
-  //   gamma = c-z;
-  //   max_c = findmax(alpha,beta,gamma);
-  //   min_c = findmin(alpha,beta,gamma);
-  //   //going that max route
-  //   //here total_c are chosen max no of iterations allowed
-  //
-  //   i_alpha =
-  // }
 
-  animate_color_transition(r,g,b,r_,g_,b_,cp){
+  animate_color_transition(this,r,g,b,r_,g_,b_,strandnumber:string){
     let red,green,blue;
-
-
     //takes colors in rgb
-    let shiftcolors = setInterval(()=>{
+    let shiftcolors = setInterval((array)=>{
       if(r == r_ && g == g_ && b == b_){
         clearInterval(shiftcolors);
+        console.log("Function ended sir");
       }
-      if(r!=r_){
-        r = r+2;
+      if(r>r_){
+        r--;
         red = r;
       }
-      if(g!=g_){
-        g++;
-        green = g;
-      }
-      if(b!=b_){
-        b--;
-        blue = b;
-      }
-      // window["input] = `rgb(${red},${green},${blue})`;
-      // console.log(window[input]);
-      //horrible code
-      switch (cp) {
-        case 1:
-        this.strand1col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 2:
-        this.strand2col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 3:
-        this.strand3col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 4:
-        this.strand4col = `rgb(${red},${green},${blue})`;
-        break;
-        }
-    },20);
-  }
-
-  animate_color_transition1(r,g,b,r_,g_,b_,cp){
-    let red,green,blue;
-
-
-    //takes colors in rgb
-    let shiftcolors = setInterval(()=>{
-      if(r == r_ && g == g_ && b == b_){
-        clearInterval(shiftcolors);
-      }
-      if(r!=r_){
-        r --;
+      if(r<r_){
+        r++;
         red = r;
       }
-      if(g!=g_){
+      if(g>g_){
         g--;
         green = g;
       }
-      if(b!=b_){
+      if(g<g_){
+        g++;
+        green = g;
+      }
+      if(b>b_){
+        b--;
+        blue = b;
+      }
+      if(b<b_){
         b++;
         blue = b;
       }
-      // window["input] = `rgb(${red},${green},${blue})`;
-      // console.log(window[input]);
-      //horrible code
-      switch (cp) {
-        case 1:
-        this.strand1col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 2:
-        this.strand2col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 3:
-        this.strand3col = `rgb(${red},${green},${blue})`;
-        break;
-
-        case 4:
-        this.strand4col = `rgb(${red},${green},${blue})`;
-        break;
-        }
+      this.strandobject[strandnumber] = `rgb(${red},${green},${blue})`;
     },20);
   }
 
-
-
     ngAfterViewInit() {
+
+      // setTimeout(()=>{this.updateProp();},2000);
       setTimeout(()=>{
-        //colorless to blind and backgroundcol
-        this.animate_color_transition1(180,181,181,0,172,238,1);
-        this.animate_color_transition1(180,181,181,0,172,238,2);
-        this.animate_color_transition1(180,181,181,0,172,238,3);
-        this.animate_color_transition1(180,181,181,0,172,238,4);
+        // var mystring = 'one';
+        // console.log(this.dict[mystring]);
+        var strandnumber = 'one';
+        this.animate_color_transition(180,181,181,0,172,238,strandnumber);
+      },3000);
 
-      },2000);
-
-      // setTimeout(()=>{
-      //   //                    BACK                          //
-      //   this.animate_color_transition(0,172,238,180,181,181,1);
-      //   this.animate_color_transition(0,172,238,180,181,181,2);
-      //   this.animate_color_transition(0,172,238,180,181,181,3);
-      //   this.animate_color_transition(0,172,238,180,181,181,4);
-      //
-      // },6000);
-      setTimeout(()=>{console.log("Strand 1 dict is:");
-      console.log("this.strand1col is:");
-      console.log(this.strand1col);},6000);
     }
-  //
-  // async animate_banner(){
-  //   let animatebanner = setInterval(()=>{
-  //
-  //
-  //
-  //   },20);
-  // }
-
-
-
 
 
 }
