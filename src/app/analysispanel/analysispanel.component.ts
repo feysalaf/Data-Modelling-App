@@ -62,10 +62,12 @@ export class AnalysispanelComponent implements OnInit {
 
    //circular progress
    path:string;
-   circularprog1:number;
-   circularprog2:number;
-   circularprog3:number;
-   circularprog4:number;
+   circularobject = {
+           circularprog1:0,
+           circularprog2:0,
+           circularprog3:0,
+           circularprog4:0,
+    }
 
    //latex
    paragraphs: string = `
@@ -273,43 +275,21 @@ export class AnalysispanelComponent implements OnInit {
 
   // TODO: implement generality in a better way
   //it has something to do with passing reference by value
-  animate_circular_progress(i:number,f:number,cp:number){
+  animate_circular_progress(i:number,f:number,meter:string){
     //here i is where to start the progress
     //and f is where to end it
     let start;
     let end;
     start = this.NormalizeToScale(i,146,100);
     end   = this.NormalizeToScale(f,146,100);
-
-
     let animateprogress = setInterval(()=>{
-
       if(start<end){
-
         if(start==end){
           clearInterval(animateprogress);
         }
         else{
           start++;
-          //horrible code
-          switch (cp) {
-            case 1:
-            this.circularprog1 = start;
-            break;
-
-            case 2:
-            this.circularprog2 = start;
-            break;
-
-            case 3:
-            this.circularprog3 = start;
-            break;
-
-            case 4:
-            this.circularprog4 = start;
-            break;
-            }
-
+          this.circularobject[meter] = start;
         }
       }
       if(start>end){
@@ -318,49 +298,29 @@ export class AnalysispanelComponent implements OnInit {
         }
         else{
           start--;
-          //horrible code
-          switch (cp) {
-            case 1:
-            this.circularprog1 = start;
-            break;
-
-            case 2:
-            this.circularprog2 = start;
-            break;
-
-            case 3:
-            this.circularprog3 = start;
-            break;
-
-            case 4:
-            this.circularprog4 = start;
-            break;
-            }
-
+          this.circularobject[meter] = start;
         }
       }
     },20);
-
-
   }
 
   anima(){
+    var meter1:string = 'circularprog1';
+    var meter2:string = 'circularprog2';
+    var meter3:string = 'circularprog3';
+    var meter4:string = 'circularprog4';
+
     // this.AnimateCircle(90,180);
     // await this.sleep(4000);
     // this.AnimateCircle(0,270);
     // await this.sleep(4000);
     // this.AnimateCircle(0,140);
 
-    this.animate_circular_progress(0,100,1);
-    this.animate_circular_progress(50,100,2);
-    this.animate_circular_progress(0,50,3);
-    this.animate_circular_progress(0,10,4);
-
+    this.animate_circular_progress(0,100,meter1);
+    this.animate_circular_progress(50,100,meter2);
+    this.animate_circular_progress(0,50,meter3);
+    this.animate_circular_progress(0,10,meter4);
   }
-
-
-
-
   ngAfterViewInit() {
     let pre:number = 50;
     setTimeout(()=>{this.toggle();},2000);
