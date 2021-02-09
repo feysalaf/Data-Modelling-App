@@ -12,10 +12,18 @@ import * as io from 'socket.io-client';
 export class VerticalsidebarComponent implements OnInit {
 
   //initialize html vars
+  apiendpoint:string;
   temperature:number;
   velocity:number;
   density:number;
-
+  //create a dataobject which contains the entries to be
+  //updated on the frontend
+  dataobject = {
+    apiendpoint:'',
+    temperature:0,
+    velocity:0,
+    density:0,
+  }
   constructor() {
 
   }
@@ -47,6 +55,7 @@ export class VerticalsidebarComponent implements OnInit {
       console.log("Data received from server");
       //send to html
       // this.output = msg['data'];
+      this.dataobject['apiendpoint'] = msg['data'];
     })
 }
 
@@ -55,6 +64,7 @@ export class VerticalsidebarComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    //selects by class
     let button = document.querySelector('.buttonfont');
     let buttonobserver = fromEvent(button, 'click');
     //whenever the button is pressed, the buttonobserver knows it

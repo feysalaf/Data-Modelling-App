@@ -19,10 +19,10 @@ export class AppComponent {
   title = 'DataModellingInterface';
 
   strandobject = {
-    one    :`rgb(180,181,181)`,
-    two    :`rgb(180,181,181)`,
-    three  :`rgb(180,181,181)`,
-    four   : `rgb(180,181,181)`
+    one    :`rgb(105,105,105)`,
+    two    :`rgb(105,105,105)`,
+    three  :`rgb(105,105,105)`,
+    four   : `rgb(105,105,105)`
   }
 
   constructor(){
@@ -103,15 +103,15 @@ export class AppComponent {
       var strand2 = 'two';
       var strand3 = 'three';
       var strand4 = 'four';
-      this.animate_color_transition(180,181,181,0,172,238,strand1);
-      this.animate_color_transition(180,181,181,0,172,238,strand2);
-      this.animate_color_transition(180,181,181,0,172,238,strand3);
-      this.animate_color_transition(180,181,181,0,172,238,strand4);
+      this.animate_color_transition(105,105,105,0,172,238,strand1);
+      this.animate_color_transition(105,105,105,0,172,238,strand2);
+      this.animate_color_transition(105,105,105,0,172,238,strand3);
+      this.animate_color_transition(105,105,105,0,172,238,strand4);
       setTimeout(()=>{
-            this.animate_color_transition(0,172,238,180,181,181,strand1);
-            this.animate_color_transition(0,172,238,180,181,181,strand2);
-            this.animate_color_transition(0,172,238,180,181,181,strand3);
-            this.animate_color_transition(0,172,238,180,181,181,strand4);
+            this.animate_color_transition(0,172,238,105,105,105,strand1);
+            this.animate_color_transition(0,172,238,105,105,105,strand2);
+            this.animate_color_transition(0,172,238,105,105,105,strand3);
+            this.animate_color_transition(0,172,238,105,105,105,strand4);
 
       },3000);
 

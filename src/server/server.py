@@ -10,7 +10,14 @@ app = Flask(__name__,template_folder ='templates/')
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 CORS(app)
 #instantiating the socket io object
-socketio = SocketIO(app,cors_allowed_origins=['http://127.0.0.1:4200'],async_mode='threading')
+socketio = SocketIO(app,cors_allowed_origins=['http://localhost:4200'],async_mode='threading')
+
+#whenever page is load
+#user is directed to the
+#home page
+@app.route("/",methods=['GET','POST'])
+def showhomepage():
+    return render_template("index.html")
 
 
 
