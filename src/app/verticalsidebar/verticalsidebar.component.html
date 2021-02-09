@@ -18,11 +18,11 @@
                                                     <col span="1" style="width: 15%;">
 
                                                   </colgroup>
-
+                                                          <!-- animate-pulse -->
                                                   <tr class="traverse">
-                                                    <td class="alignright"> {{dataobject.apiendpoint}} </td>
-                                                    <td><div @fade class="center colbox animate-pulse "></div></td>
-                                                    <td class="center bold-text wide">API-ENDPOINT  </td>
+                                                    <td  class="alignright"> {{dataobject.apiendpoint}} </td>
+                                                    <td><div [@openclose]="isOpen ? 'open' : 'closed'" class="center colbox "></div></td>
+                                                    <td class="center bold-text wide">Server  </td>
                                                     <td class="ml-3 accent-text">string</td>
 
                                                     <!-- <td class="ml-3 accent-text">&#176; C  </td> -->

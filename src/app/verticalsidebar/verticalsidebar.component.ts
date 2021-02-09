@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, stretchout  } from '../../assets/animations/animations';
+import { fade, stretchout, redtoblue, bluetored,openclose  } from '../../assets/animations/animations';
 import { fromEvent } from 'rxjs';
 import * as io from 'socket.io-client';
 
@@ -7,7 +7,7 @@ import * as io from 'socket.io-client';
   selector: 'app-verticalsidebar',
   templateUrl: './verticalsidebar.component.html',
   styleUrls: ['./verticalsidebar.component.css'],
-  animations:[fade,stretchout ]
+  animations:[fade,stretchout, redtoblue, bluetored ,openclose]
 })
 export class VerticalsidebarComponent implements OnInit {
 
@@ -28,6 +28,17 @@ export class VerticalsidebarComponent implements OnInit {
 
   }
 
+  // animation methods
+  isOpen = false;
+
+  trigger(){
+    this.isOpen = !this.isOpen;
+  }
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+
   updatehtml(){
     let mynum: string;
     // mynum = Math.floor(Math.random() * 100) + 1  ;
@@ -42,7 +53,7 @@ export class VerticalsidebarComponent implements OnInit {
     console.log("Connected to server");
 
     //call api point with data
-    socket.emit('api endpoint',{'data':'User connection'})
+    socket.emit('api endpoint',{'data':'Connected'})
 
     //call api points(multiple)
     // socket.on( 'connect',() => {
@@ -56,6 +67,9 @@ export class VerticalsidebarComponent implements OnInit {
       //send to html
       // this.output = msg['data'];
       this.dataobject['apiendpoint'] = msg['data'];
+      //trigger animation
+      let obj = this.trigger();
+      console.log(obj);
     })
 }
 
@@ -64,13 +78,14 @@ export class VerticalsidebarComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+
     //selects by class
     let button = document.querySelector('.buttonfont');
     let buttonobserver = fromEvent(button, 'click');
     //whenever the button is pressed, the buttonobserver knows it
     //and then it executes a function upon the CLICK EVENT
     const uponeventexecute = buttonobserver.subscribe(() => {
-      this.fetchdatafromserver();
+      this.toggle();
     })
     }
 
