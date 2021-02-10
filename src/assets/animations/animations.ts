@@ -84,20 +84,20 @@ export let bluetored = trigger('bluetored',[
 ])
 
 
-export let openclose = trigger('openclose', [
+export let onoff = trigger('onoff', [
       // ...
-      state('open', style({
+      state('off', style({
 
         backgroundColor: '#FF0007'
       })),
-      state('closed', style({
+      state('on', style({
 
         backgroundColor: '#00ACEE'
       })),
-      transition('open => closed', [
+      transition('on => off', [
         animate('1s')
       ]),
-      transition('closed => open', [
+      transition('off => on', [
         animate('0.5s')
       ]),
     ])

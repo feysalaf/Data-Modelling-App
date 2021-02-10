@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, stretchout, redtoblue, bluetored,openclose  } from '../../assets/animations/animations';
+import { fade, stretchout, redtoblue, bluetored,onoff  } from '../../assets/animations/animations';
 import { fromEvent } from 'rxjs';
 import * as io from 'socket.io-client';
 
@@ -7,7 +7,7 @@ import * as io from 'socket.io-client';
   selector: 'app-verticalsidebar',
   templateUrl: './verticalsidebar.component.html',
   styleUrls: ['./verticalsidebar.component.css'],
-  animations:[fade,stretchout, redtoblue, bluetored ,openclose]
+  animations:[fade,stretchout, redtoblue, bluetored ,onoff]
 })
 export class VerticalsidebarComponent implements OnInit {
 
@@ -29,15 +29,27 @@ export class VerticalsidebarComponent implements OnInit {
   }
 
   // animation methods
-  isOpen = false;
+  //DEFAULT is set to false, change to true 
+  //when the data starts coming
+  //set to false when it stops or disconnects
+  datacheck:boolean = false;
+  
+  dataon(){
+  //when method executed, set datacheck to true
+    this.datacheck = true;
+   }
+  
+  dataoff(){
+    this.datacheck = false;
+   }
 
-  trigger(){
-    this.isOpen = !this.isOpen;
-  }
+  //trigger(){
+  //  this.isOpen = !this.isOpen;
+  //}
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
+  //toggle() {
+  //  this.isOpen = !this.isOpen;
+  //}
 
   updatehtml(){
     let mynum: string;
@@ -68,8 +80,7 @@ export class VerticalsidebarComponent implements OnInit {
       // this.output = msg['data'];
       this.dataobject['apiendpoint'] = msg['data'];
       //trigger animation
-      let obj = this.trigger();
-      console.log(obj);
+      //TO DO
     })
 }
 
@@ -85,7 +96,7 @@ export class VerticalsidebarComponent implements OnInit {
     //whenever the button is pressed, the buttonobserver knows it
     //and then it executes a function upon the CLICK EVENT
     const uponeventexecute = buttonobserver.subscribe(() => {
-      this.toggle();
+      this.dataon();
     })
     }
 
