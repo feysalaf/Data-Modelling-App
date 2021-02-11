@@ -80,7 +80,7 @@ export class VerticalsidebarComponent implements OnInit {
       // this.output = msg['data'];
       this.dataobject['apiendpoint'] = msg['data'];
       //trigger animation
-      //TO DO
+      this.dataon();
     })
 }
 
@@ -89,6 +89,7 @@ export class VerticalsidebarComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+ 
 
     //selects by class
     let button = document.querySelector('.buttonfont');
@@ -96,7 +97,7 @@ export class VerticalsidebarComponent implements OnInit {
     //whenever the button is pressed, the buttonobserver knows it
     //and then it executes a function upon the CLICK EVENT
     const uponeventexecute = buttonobserver.subscribe(() => {
-      this.dataon();
+      this.fetchdatafromserver();
     })
     }
 
