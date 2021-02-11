@@ -1,10 +1,40 @@
 import matplotlib.pyplot as plt
 import seaborn as sb, numpy as np
+from seaborn import lineplot
+import pandas as pd
+from IPython.display import display
+#
+# sb.set_theme(style="darkgrid", palette='deep')
+sb.set_style(style="darkgrid" )
 
+sb.set(font="Gentium")
+sb.color_palette("crest", as_cmap=True)
+# sb.set_style({'axes.grid' : True})
 
-sb.set_theme(style="whitegrid")
+#         GRAPH THEME           #
+#to set a theme, simply uncomment it
+# dark
+# textColor:str       = '#BFBAB0'
+# backgroundColor:str = '#1F2430'
+# gridColor:str       = '#6F6F6F'
+# gridOuter:str       = '#1F2430'
 
+# scientific light
+textColor:str       = '#252223'
+backgroundColor:str = '#EAEAF2'
+gridColor:str       = '#FFFFFF'
+gridOuter:str       = '#EAEAF2'
 
+sb.set(rc={'axes.facecolor':backgroundColor,
+          'figure.facecolor':backgroundColor,
+          'grid.color':gridColor,
+          'text.color':textColor,
+          'axes.labelcolor':textColor,
+          'axes.edgecolor':gridOuter,
+          'xtick.color':textColor,
+          'ytick.color':textColor})
+
+palette = sb.color_palette("mako_r", 2)
 #generate data
 #data architecture
 # list  = [
@@ -28,11 +58,10 @@ def generate_data(function:str,ranges:dict):
         #to ith element in
         #the list + add dict to that entry
         datalist.append({"x":i,"y":function(i)})
-    print(datalist)
+    return datalist
 
 
-
-ranges = {"start":0,"end":10}
+ranges = {"start":-150,"end":151}
 
 #function
 def LinearFunction(i):
@@ -41,8 +70,21 @@ def LinearFunction(i):
 def ExponentialFunction(i):
     return 32 * i
 
-generate_data(LinearFunction,ranges)
-generate_data(ExponentialFunction,ranges)
+datalist = generate_data(LinearFunction,ranges)
+datalist2 = generate_data(ExponentialFunction,ranges)
+data = pd.DataFrame(datalist)
+data2 = pd.DataFrame(datalist2)
+
+#append data2 y to data
+data['y_1'] = pd.Series(data2['y'])
+print(data.head(10))
+
+#melting data2
+data = data.melt('x', var_name='Values',  value_name='values')
+#TODO graph the functions from data
+lineplot(x="x", y="values", hue='Values', data=data,palette=palette)
+# lineplot(x='x',y='y',data=data,markers=True)
+plt.show()
 
 
 
