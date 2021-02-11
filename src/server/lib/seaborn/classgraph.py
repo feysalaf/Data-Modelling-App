@@ -2,31 +2,28 @@ import matplotlib.pyplot as plt
 import seaborn as sb, numpy as np
 from seaborn import lineplot
 import pandas as pd
-from IPython.display import display
 
 
 class Graph():
-    def __init__(self):
+    def __init__(self,*args):
         global graph_counter
         graph_counter = 0
-        sb.set_style(style="darkgrid" )
+        sb.set_style(style="darkgrid")
 
         sb.set(font="Gentium")
         sb.color_palette("crest", as_cmap=True)
-
-        #         GRAPH THEME           #
-        #to set a theme, simply uncomment it
-        # dark
-        # textColor:str       = '#BFBAB0'
-        # backgroundColor:str = '#1F2430'
-        # gridColor:str       = '#6F6F6F'
-        # gridOuter:str       = '#1F2430'
-
-        # scientific light
-        textColor:str       = '#252223'
-        backgroundColor:str = '#EAEAF2'
-        gridColor:str       = '#FFFFFF'
-        gridOuter:str       = '#EAEAF2'
+        for t in args:
+            if(t == 'light' or t == 'Light'):
+                # scientific light
+                textColor:str       = '#252223'
+                backgroundColor:str = '#EAEAF2'
+                gridColor:str       = '#FFFFFF'
+                gridOuter:str       = '#EAEAF2'
+            elif(t == 'dark' or t == 'Dark'):
+                textColor:str       = '#BFBAB0'
+                backgroundColor:str = '#1F2430'
+                gridColor:str       = '#6F6F6F'
+                gridOuter:str       = '#1F2430'
 
         sb.set(rc={'axes.facecolor':backgroundColor,
                   'figure.facecolor':backgroundColor,
@@ -53,6 +50,12 @@ class Graph():
                 graph_counter = graph_counter + 1
                 print("Graph # {} initialized".format(graph_counter))
                 print("Final graph is: \n{}".format(graphname))
+        #graph them all
+        #set color_palette
+        palette = sb.color_palette("mako_r", graph_counter)
+        graphname = graphname.melt('x',var_name="Values",value_name='values')
+        lineplot(x="x", y="values", hue='Values', data=graphname,palette=palette)
+        plt.show()
 
 def generate_data(function:str,ranges:dict):
     #declare data container(list)
@@ -66,19 +69,31 @@ def generate_data(function:str,ranges:dict):
     return datalist
 
 
-ranges = {"start":-150,"end":151}
+ranges = {"start":-100,"end":101}
 
 #function
 def LinearFunction(i):
-    return 2 * i ** 2
+    return 2 * i ** 2 + 10
 
 def ExponentialFunction(i):
     return 32 * i
 
+def ExponentialFunction1(i):
+    return 99 * i
+
+def ExponentialFunction2(i):
+    return 3 * i + 23
+
 
 datalist = generate_data(LinearFunction,ranges)
 datalist2 = generate_data(ExponentialFunction,ranges)
-datalist3 = generate_data(ExponentialFunction,ranges)
+datalist3 = generate_data(ExponentialFunction1,ranges)
+datalist4 = generate_data(ExponentialFunction2,ranges)
 
-myobj = Graph()
-myobj.adddata(datalist,datalist2,datalist3,datalist)
+
+
+
+
+
+myobj = Graph('light')
+myobj.adddata(datalist,datalist2,datalist3)
