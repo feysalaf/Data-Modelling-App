@@ -69,8 +69,7 @@ def generate_data(function:str,ranges:dict):
     return datalist
 
 
-ranges = {"start":-100,"end":101}
-
+#ranges = {"start":-100,"end":101}
 #function
 def LinearFunction(i):
     return 2 * i ** 2 + 10
@@ -83,17 +82,9 @@ def ExponentialFunction1(i):
 
 def ExponentialFunction2(i):
     return 3 * i + 23
-
-
-datalist = generate_data(LinearFunction,ranges)
-datalist2 = generate_data(ExponentialFunction,ranges)
-datalist3 = generate_data(ExponentialFunction1,ranges)
-datalist4 = generate_data(ExponentialFunction2,ranges)
-
-
-
-
-
-
-myobj = Graph('light')
-myobj.adddata(datalist,datalist2,datalist3)
+#datalist = generate_data(LinearFunction,ranges)
+#datalist2 = generate_data(ExponentialFunction,ranges)
+#datalist3 = generate_data(ExponentialFunction1,ranges)
+#datalist4 = generate_data(ExponentialFunction2,ranges)
+#myobj = Graph('light')
+#myobj.adddata(datalist,datalist2,datalist3)
