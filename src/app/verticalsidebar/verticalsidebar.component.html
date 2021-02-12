@@ -20,8 +20,8 @@
                                                   </colgroup>
                                                           <!-- animate-pulse -->
                                                   <tr class="traverse">
-                                                    <td  class="alignright"> {{dataobject.apiendpoint}} </td>
-                                                    <td><div [@onoff]="datacheck ? 'on' : 'off'" class="center colbox "></div></td>
+                                                    <td @fade class="alignright"> {{dataobject.apiendpoint}} </td>
+                                                    <td><div [@onoff]="datacheckdict.datacheck ? 'on' : 'off'" class="center colbox "></div></td>
                                                     <td class="center bold-text wide">Server  </td>
                                                     <td class="ml-3 accent-text">string</td>
 
@@ -29,9 +29,9 @@
                                                   </tr>
 
                                                   <tr class="traverse">
-                                                    <td class="alignright">  </td>
-                                                    <td><div @fade class="colbox center"></div></td>
-                                                    <td class="center bold-text">Graph A Data </td>
+                                                    <td @fade class="alignright"> {{dataobject.analysispanel}} </td>
+                                                    <td><div [@onoff]="datacheckdict.datacheck1 ? 'on' : 'off'" class="colbox center"></div></td>
+                                                    <td class="center bold-text">Analysis Panel </td>
                                                     <td class="ml-3 accent-text">string  </td>
                                                   </tr>
 

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { fade, stretchout,soso  } from '../../assets/animations/animations';
 import { trigger, state, style, transition, animate, useAnimation } from '@angular/animations';
-
+import { fromEvent } from 'rxjs';
+import * as io from 'socket.io-client';
 @Component({
   selector: 'app-analysispanel',
   templateUrl: './analysispanel.component.html',
@@ -49,8 +50,9 @@ import { trigger, state, style, transition, animate, useAnimation } from '@angul
 
 })
 export class AnalysispanelComponent implements OnInit {
-  //global variables
-  // width:number;
+   //global variables
+   api_base: string = 'http://localhost:5000/';
+   // width:number;
    controlvar:string;
    width:number;
    var:number;
@@ -320,10 +322,28 @@ export class AnalysispanelComponent implements OnInit {
     this.animate_circular_progress(50,100,meter2);
     this.animate_circular_progress(0,50,meter3);
     this.animate_circular_progress(0,10,meter4);
+
+
   }
+ 
+
   ngAfterViewInit() {
+    const socket = io.connect(this.api_base);
+
+    //receive response
+    socket.on( 'fe_analysis_node_1', (msg) => {
+      console.log("Data received from server on analysis panel");
+      //send to html
+      // this.output = msg['data'];
+      // this.dataobject['apiendpoint'] = msg['data'];
+      //trigger animation
+      // this.dataon();
+    })
+
+
+
     let pre:number = 50;
-    setTimeout(()=>{this.toggle();},2000);
+    setTimeout(()=>{this.anima(); },2000);
     //setTimeout(()=>{this.AnimateCircle(90,180)},5000);
     // setTimeout(()=>{this.animate_svg(0,187)},2000);
     // setTimeout(()=>{this.animate_svg(187,0)},10000);

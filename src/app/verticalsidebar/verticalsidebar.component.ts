@@ -10,7 +10,7 @@ import * as io from 'socket.io-client';
   animations:[fade,stretchout, redtoblue, bluetored ,onoff]
 })
 export class VerticalsidebarComponent implements OnInit {
-
+  api_base: string = 'http://localhost:5000/';
   //initialize html vars
   apiendpoint:string;
   temperature:number;
@@ -19,28 +19,35 @@ export class VerticalsidebarComponent implements OnInit {
   //create a dataobject which contains the entries to be
   //updated on the frontend
   dataobject = {
-    apiendpoint:'',
-    temperature:0,
-    velocity:0,
-    density:0,
+          apiendpoint:'',
+          analysispanel:'',
+          temperature:0,
+          velocity:0,
+          density:0,
   }
   constructor() {
 
   }
 
   // animation methods
-  //DEFAULT is set to false, change to true 
+  //DEFAULT is set to false, change to true
   //when the data starts coming
   //set to false when it stops or disconnects
-  datacheck:boolean = false;
-  
-  dataon(){
-  //when method executed, set datacheck to true
-    this.datacheck = true;
+  datacheck:boolean;
+  datacheck1:boolean;
+
+  datacheckdict = {
+          datacheck : false,
+          datacheck1 : false,
+  }
+  //TODO: Generalize for any datacheck
+  //DONE
+  dataon(input:string){
+    this.datacheckdict[input] = true;
    }
-  
-  dataoff(){
-    this.datacheck = false;
+
+  dataoff(input:string){
+    this.datacheckdict[input] = false;
    }
 
   //trigger(){
@@ -57,11 +64,10 @@ export class VerticalsidebarComponent implements OnInit {
     // this.output = mynum;
   }
 
+
+
   fetchdatafromserver(){
-    let api_b: string;
-    let api_base: string = 'http://localhost:5000/';
-    console.log(api_base);
-    const socket = io.connect(api_base);
+    const socket = io.connect(this.api_base);
     console.log("Connected to server");
 
     //call api point with data
@@ -73,15 +79,7 @@ export class VerticalsidebarComponent implements OnInit {
     //     'data': 'User Connected'
     //   } )})
 
-    //receive response
-    socket.on( 'receivefromserver', (msg) => {
-      console.log("Data received from server");
-      //send to html
-      // this.output = msg['data'];
-      this.dataobject['apiendpoint'] = msg['data'];
-      //trigger animation
-      this.dataon();
-    })
+
 }
 
   ngAfterContentChecked(){
@@ -89,7 +87,20 @@ export class VerticalsidebarComponent implements OnInit {
   }
 
   ngAfterViewInit() {
- 
+    ///////        FE API ENDPOINTS       //////
+    const socket = io.connect(this.api_base);
+    //receive response
+    socket.on( 'receivefromserver', (msg) => {
+      console.log("Data received from server");
+      //send to html
+      // this.output = msg['data'];
+      this.dataobject['apiendpoint']   = msg['data'];
+      this.dataobject['analysispanel'] = msg['data'];
+      //trigger animation
+      this.dataon('datacheck');
+      this.dataon('datacheck1');
+    })
+
 
     //selects by class
     let button = document.querySelector('.buttonfont');
@@ -98,6 +109,8 @@ export class VerticalsidebarComponent implements OnInit {
     //and then it executes a function upon the CLICK EVENT
     const uponeventexecute = buttonobserver.subscribe(() => {
       this.fetchdatafromserver();
+      //ask server to send graph data
+
     })
     }
 

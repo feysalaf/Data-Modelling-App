@@ -10,7 +10,7 @@ export let fade = trigger('fade',[
 
   transition(':enter,:leave',[
   style({opacity:0}),
-  animate(2200)])])
+  animate(2700)])])
 
 export let stretchout = trigger('stretchout',[
 
@@ -68,10 +68,10 @@ export let redtoblue = trigger('redtoblue',[
   state('ON',style({"backgroundColor":"#FF0007"})),
 
    transition('ON => OFF',[
-     animate(2000)
+     animate(3000)
    ]),
    transition('OFF => ON',[
-     animate(2000)
+     animate(3000)
    ]),
 
   ])
@@ -95,9 +95,9 @@ export let onoff = trigger('onoff', [
         backgroundColor: '#00ACEE'
       })),
       transition('on => off', [
-        animate('1s')
+        animate(1300)
       ]),
       transition('off => on', [
-        animate('0.5s')
+        animate(1300)
       ]),
     ])

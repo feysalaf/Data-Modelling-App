@@ -28,7 +28,9 @@ def handle_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
     # socketio.emit('receivefromserver', json, callback=lambda:print("Message Received."))
     socketio.emit('receivefromserver', json)
-
+    #send same data to analysis api node
+    socketio.emit('fe_analysis_node_1',json)
+##################### SERVER METHODS #############################
 
 
 def start_server():
