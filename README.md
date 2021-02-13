@@ -4,7 +4,7 @@ This is a user interface built to represent any kind of data coming from the ser
 the interface enough to be able to add just a config file where the connections can be made to the servers API, but we aren't there yet ;).
 
 <p align="center">
-  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/home.png" width="100%" height="550" title="hover text">
+  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/home.png" width="100%" height="450" title="hover text">
 </p>
 
 ## Features 
