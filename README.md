@@ -17,8 +17,6 @@ the interface enough to be able to add just a config file where the connections 
 
 * Indicator nuggets alert the user of connection or the lack of it by shifting colors upon a change of state.
 
-* An animated circular progress bar
-
 <p align="center">
   <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/nuggetses.gif" width="310" height="180"  title="hover text">
 </p>
