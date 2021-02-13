@@ -44,7 +44,7 @@
                 </div> -->
 
 
-                <div class="flex_0_5 flex flex-row justify-between ml-12 mr-12 mt-5">
+                <div class=" flex_0_5 flex flex-row justify-between ml-12 mr-12 mt-5">
                   <!-- d="M 12.121704,52.424849 A 28,28 0 0 1 6.5393829,14.279842 " /> -->
 
                           <svg height="100px" width="100px" viewBox="0 0 60 60">
@@ -142,21 +142,25 @@
 
                 </div>
 
+                <div class="ml-6 mr-6">
+                    <div class="  flex_0_6 flex flex-row border-separate">
+                      <div class=" flex-1 flex textannotationsmaller inset-0 items-center text-center justify-center content-center">
+                        NORMALIZED VALUES
 
-                <div class="flex_0_6 flex flex-row border-separate">
-                  <div class=" flex-1 flex textannotation inset-0 items-center text-center justify-center content-center">
-                    NORMALIZED VALUES
-
-                  </div>
+                      </div>
+                    </div>
                 </div>
 
 
-                <div class="mt-10 flex-grow">
+                <div class="text-left textannotationbigger p-0 mt-10 mb-1 ml-8">SYSTEM TRIVIA</div>
+                <div class="linecontainer"><div @fade class="hline1"></div></div>
+
+                <div class="pad mt-2 flex-grow">
                   <!-- <textarea class='txt' rows="8" placeholder="Enter text here..." [(ngModel)]="mathContent"></textarea> -->
                   <app-mathjx [content]='mathContent' class="box textparagraph"></app-mathjx>
                 </div>
 
-                <div class="flex flex-row min-w-full mt-64 ">
+                <div class="pad flex flex-row min-w-full mt-0">
                   <button (click)="anima()" class="flex-1 bg-blue-500 font-bold text-white rounded-lg h-12 ">Press</button>
 
                 </div>

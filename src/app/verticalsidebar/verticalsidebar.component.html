@@ -7,9 +7,11 @@
                                      Console Panel
                           </div>
                           <div class="linecontainer"><div @stretchout class="hline"></div></div>
+                          <div class="text-left textannotation p-0 mt-10 mb-1 ml-8">SYSTEM STATE</div>
+                          <div class="linecontainer"><div @fade class="hline1"></div></div>
 
-                          <div class=" box1childcflexcontainer p-4 flex-1 text-left">
-                                          <table class="datatable gap-2 bg-orange-500 flex-grow">
+                          <div class=" box1childcflexcontainer p-2 flex-1 text-left">
+                                          <table class="datatable gap-2 bg-orange-500 flex-grow ml-4">
 
                                                   <colgroup>
                                                     <col span="1" style="width: 28%;">
@@ -37,21 +39,21 @@
 
                                                   <tr class="traverse">
                                                     <td class="alignright">  </td>
-                                                    <td><div @fade class="colbox center"></div></td>
-                                                    <td class="center bold-text">DENSITY  </td>
+                                                    <td><div [@onoff]="datacheckdict.datacheck2 ? 'on' : 'off'" class="colbox center"></div></td>
+                                                    <td class="center bold-text">Temperature  </td>
                                                     <!-- <td class="accent-text">&#181;g/m<sup>3</sup>  </td> -->
-                                                    <td class="accent-text">&#181;g/m<sup>3</sup>  </td>
+                                                    <td class="accent-text">&#176; C    </td>
 
                                                   </tr>
 
                                                   <tr class="traverse">
                                                     <td class="alignright"> </td>
-                                                    <td><div @fade class="colbox center"></div></td>
-                                                    <td class="center bold-text">ANGULAR MOMENTUM  </td>
-                                                    <td class="accent-text">&#181;g/m<sup>3</sup>  </td>
+                                                    <td><div [@onoff]="datacheckdict.datacheck3 ? 'on' : 'off'" class="colbox center"></div></td>
+                                                    <td class="center bold-text">Velocity  </td>
+                                                    <td class="accent-text">km/h  </td>
                                                   </tr>
 
-                                                  <tr class="traverse">
+                                                  <!-- <tr class="traverse">
                                                     <td class="alignright">   </td>
                                                     <td><div @fade class="colbox center"></div></td>
                                                     <td class="center bold-text">SPECIFIC GRAVITY  </td>
@@ -84,7 +86,7 @@
                                                     <td><div @fade class="colbox center"></div></td>
                                                     <td class="center bold-text">Distance from origin  </td>
                                                     <td class="accent-text">&#181;g/m<sup>3</sup>  </td>
-                                                  </tr>
+                                                  </tr> -->
 
 
                                           </table>

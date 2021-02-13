@@ -43,14 +43,37 @@
   src: url("../../assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
 
+.pad{
+  padding:30px;
+}
 
+.textannotationbigger{
+  font-family:'lato-light';
+  font-size:30px;
+  font-weight: 500;
+  color:white;
+
+}
+
+
+ .hline1{
+    flex:1;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top:1px solid gray;
+    margin: 0px auto 0px auto;
+    padding: 0;
+    width:90%;
+    opacity: 50%;
+ }
 
 .textheading{
   font-family: 'lato-bold';
   font-size:28px;
 }
 
-.textannotation{
+.textannotationsmaller{
   font-family:'lato-light';
   font-size:20px;
   font-weight:700;

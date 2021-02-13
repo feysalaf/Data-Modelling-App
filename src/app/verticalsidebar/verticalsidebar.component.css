@@ -22,14 +22,20 @@ src: url("../../assets/fonts/Lato/Lato-Thin.ttf") format("truetype");
 font-family: lato-bold;
 src: url("../../assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
 }
+@font-face {
+font-family: benne-regular;
+src: url("../../assets/fonts/Benne-Regular.ttf") format("truetype");
+}
+
 
 table.datatable{
   width:100%;
   line-height: 30px;
-  padding:40px;
-  /* border:1px solid orange; */
+  padding:10px;
+  /* border:1px solid gray; */
   border-spacing:0 15px;
   border-collapse: separate;
+
 }
 
 table.datatable thead.traverse th.wider{
@@ -72,15 +78,15 @@ table>tr{
 }
 
 .textheading{
-font-family: 'lato-bold';
-font-size:28px;
+  font-family: 'lato-bold';
+  font-size:28px;
 }
 
 .textannotation{
-font-family:'lato-light';
-font-size:20px;
-font-weight:700;
-color:white;
+  font-family:'lato-light';
+  font-size:30px;
+  font-weight: 500;
+  color:white;
 
 }
 
@@ -194,6 +200,18 @@ button{
     margin: 0px auto 0px auto;
     padding: 0;
     width:80%;
+ }
+
+ .hline1{
+    flex:1;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top:1px solid gray;
+    margin: 0px auto 0px auto;
+    padding: 0;
+    width:90%;
+    opacity: 50%;
  }
 
  .text{

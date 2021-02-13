@@ -37,8 +37,10 @@ export class VerticalsidebarComponent implements OnInit {
   datacheck1:boolean;
 
   datacheckdict = {
-          datacheck : false,
+          datacheck  : false,
           datacheck1 : false,
+          datacheck2 : false,
+          datacheck3 : false
   }
   //TODO: Generalize for any datacheck
   //DONE

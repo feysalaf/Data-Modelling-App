@@ -46,7 +46,7 @@
 }
 
 .text{
-  color:#00ACEE;
+  color:white;
   font-family: noto sans light;
   font-size:30px;
 }
@@ -57,7 +57,7 @@
    display: block;
    height: 1px;
    border: 0;
-   border-top:1px solid #00ACEE;
+   border-top:1px solid gray;
    margin: 0px auto 0px auto;
    padding: 0;
    width:80%;

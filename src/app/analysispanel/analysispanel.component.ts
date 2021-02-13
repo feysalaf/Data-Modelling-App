@@ -77,7 +77,11 @@ export class AnalysispanelComponent implements OnInit {
     You also can write expressions in display mode as follows: $$\\sum_{i=1}^n(x_i^2 - \\overline{x}^2)$$.
   `;
 
-    mathContent:string = `Normalization here is done by taking the maximum and minimum values in the formula $ f(i)$ where $f$ is a function that takes an $i$ input and returns it's normalized value between $0$ and $1$ as follows: $$f(i) = \\frac{i - \\text{min}}{\\text{max - min}} $$ Afterwards the value can be scaled up to be normalized in any approriate range as required or just be used as it is.`;
+    mathContent:string = `Normalization here is done by taking the maximum and minimum values in the formula $ f(i)$ where $f$ is a function that takes an $i$ input and returns it's normalized value between $0$ and $1$ as follows: $$f(i) = \\frac{i - \\text{min}}{\\text{max - min}} $$
+    Afterwards the value can be scaled up to be normalized in any approriate range as required or just be used as it is.  $$$$
+    The backend is exposed by an API. The frontend can connect to those ends and receive data. The system state panel keeps track of method states and uses indicators to display information about a particular state.
+    Upon pressing the execute button, the frontend connects to the server and the server generates random values which are then displayed on the graphs. 
+    `;
 
 
   constructor() {
@@ -325,7 +329,7 @@ export class AnalysispanelComponent implements OnInit {
 
 
   }
- 
+
 
   ngAfterViewInit() {
     const socket = io.connect(this.api_base);
