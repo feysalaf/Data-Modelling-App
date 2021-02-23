@@ -2,6 +2,9 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
   "projects": {
     "DataModellingInterface": {
       "projectType": "application",
@@ -11,7 +14,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",`
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/DataModellingInterface",
             "index": "src/index.html",
@@ -55,8 +58,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "300kb",
-                  "maximumError": "500kb"
+                  "maximumWarning": "60kb",
+                  "maximumError": "100kb"
                 }
               ]
             }
