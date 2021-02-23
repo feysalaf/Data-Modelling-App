@@ -65,7 +65,7 @@ export class AnimationbarComponent implements OnInit {
             var option = {
             	showLines: true,
               scales:{xAxes:[{type:'realtime',realtime:{
-                    duration:20000,
+                    duration:40000,
                     refresh:2000,
                     delay:3000,
                     pause:false,
