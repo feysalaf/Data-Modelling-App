@@ -4,7 +4,7 @@ This is a user interface built to represent any kind of data coming from the ser
 the interface enough to be able to add just a config file where the connections can be made to the servers API, but we aren't there yet ;).
 
 <p align="center">
-  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/home.png" width="100%" height="450" title="hover text">
+  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/RealTimeUserInterface.png" width="100%" height="450" title="hover text">
 </p>
 
 ## Features 
@@ -12,13 +12,13 @@ the interface enough to be able to add just a config file where the connections 
 * An animated circular progress bar
 
 <p align="center">
-  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/circular.gif" width="300" height="150"  title="hover text">
+  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/Circular.gif" width="300" height="150"  title="hover text">
 </p>
 
 * Indicator nuggets alert the user of connection or the lack of it by shifting colors upon a change of state.
 
 <p align="center">
-  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/nuggetses.gif" width="310" height="180"  title="hover text">
+  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/AnimatedIndicators.gif" width="310" height="180"  title="hover text">
 </p>
 
 
@@ -26,7 +26,7 @@ the interface enough to be able to add just a config file where the connections 
 
 
 <p align="center">
-  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/graph.gif" width="664" height="330"  title="hover text">
+  <img src="https://github.com/arkilo/Data-Modelling-App/blob/main/docs/readme/ChartJSRealtimeGraph.gif" width="664" height="330"  title="hover text">
 </p>
 
 * A clean interface designed to display maximum amount of information smartly
