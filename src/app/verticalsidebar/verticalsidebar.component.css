@@ -163,12 +163,16 @@ color:white;
    flex-direction: row;
    gap:10px;
    @apply ml-5 mr-5;
-   height: 60px;
+   height: 12px;
     justify-content: space-between;
  }
  .boxbutton{
-     @apply rounded-lg;
-     width:180px;
+      width:180px;
+       font-size:13px;
+       font-style: bold;
+       font-family:'lato-bold';
+       color:white;
+
 
   }
 
