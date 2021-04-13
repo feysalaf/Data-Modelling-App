@@ -48,4 +48,3 @@ the interface enough to be able to add just a config file where the connections 
 
 * Importance of using types in the code
 
-* Dedication, focus and sheer will
