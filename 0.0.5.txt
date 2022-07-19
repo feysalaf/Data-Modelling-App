@@ -1,0 +1,12 @@
+0.0.5 Version Notes:
+
+- Consists of the general scaffolding to create a new interface that you 
+want. This is the branch before the next one where things are set to be
+a little pretentious for a lack of a better word.
+
+FEATURES:
+
+- Graphs disconnected from any backend
+- Indicator nuggets lighting up upon connection
+- Latex integration allows writing text in
+  latex format and rendering them clienside
